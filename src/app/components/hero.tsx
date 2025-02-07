@@ -2,10 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    // overflow-x-hidden で横方向のあふれを防止し、
-    // pt-16 で固定Navbarと重ならないように上部に余白を確保
     <div className="overflow-x-hidden pt-20 md:pt-16 md:h-screen flex flex-col">
-      {/* メインコンテンツ（中央に固定） */}
       <div className="flex-grow flex items-center justify-center">
         <div className="max-w-7xl w-full mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* 左側の説明エリア */}
@@ -33,13 +30,11 @@ export default function Hero() {
           <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
             <Image
               src="/laptop.png"
-              alt="Beautiful travel destination"
+              alt="laptop"
               width={600}
               height={225}
               quality={75}
               sizes="100vw"
-              // object-contain に加え、w-full かつ max-w-md（約448px）を指定し、
-              // 小さい画面でも画像が横幅を超えないようにする
               className="object-contain w-full max-w-md h-auto"
             />
           </div>
@@ -52,8 +47,6 @@ export default function Hero() {
           TC3のお客様
         </h2>
         <div className="flex flex-wrap items-center justify-center gap-6 mt-4">
-          {/* 各ロゴをラッパーdivで囲み、max-w-full を指定することで
-              画面幅が狭い場合にも横にあふれず折り返されるようにする */}
           {[
             "/client_logos/msad.png",
             "/client_logos/msad.png",

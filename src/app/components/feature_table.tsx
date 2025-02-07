@@ -84,7 +84,6 @@ export default function FeatureComparisonTable() {
     },
   ];
 
-  // カテゴリごとの出現回数をカウント
   const categoryCounts: Record<string, number> = {};
   plans[0].features.forEach((feature) => {
     categoryCounts[feature.category] =
@@ -124,7 +123,7 @@ export default function FeatureComparisonTable() {
         </thead>
         <tbody>
           {plans[0].features.map((feature, index) => {
-            const showCategory = !categoryRendered[feature.category]; // 初回のみカテゴリ名を表示
+            const showCategory = !categoryRendered[feature.category];
             categoryRendered[feature.category] = true;
 
             return (

@@ -43,10 +43,8 @@ export default function FeatureCarousel() {
           <CarouselContent>
             {features.map((feature, index) => (
               <CarouselItem key={index}>
-                {/* CarouselItem 内のパディングをレスポンシブに変更 */}
                 <div className="p-2 sm:p-4 md:p-6 lg:p-8">
                   <Card>
-                    {/* CardContent のパディングやテキストサイズを調整 */}
                     <CardContent className="flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 lg:p-10 text-center">
                       <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
                         {feature.title}

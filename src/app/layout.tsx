@@ -4,7 +4,7 @@ import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
-  preload: true,
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {

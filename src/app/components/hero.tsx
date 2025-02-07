@@ -2,24 +2,26 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="h-screen flex flex-col">
+    // overflow-x-hidden で横方向のあふれを防止し、
+    // pt-16 で固定Navbarと重ならないように上部に余白を確保
+    <div className="overflow-x-hidden pt-20 md:pt-16 md:h-screen flex flex-col">
       {/* メインコンテンツ（中央に固定） */}
       <div className="flex-grow flex items-center justify-center">
-        <div className="max-w-7xl w-full mx-auto flex items-center justify-between">
+        <div className="max-w-7xl w-full mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* 左側の説明エリア */}
-          <div className="w-1/2 text-left">
-            <h1 className="text-2xl font-bold pb-4 text-blue-700">
+          <div className="w-full md:w-2/3 text-center md:text-left md:pl-12">
+            <h1 className="text-lg sm:text-xl lg:text-2xl font-bold pb-4 text-blue-700">
               Unleash your potential with Tactna
             </h1>
-            <h1 className="text-5xl font-bold">
+            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold">
               認証認可・ID管理は
               <br />
               ぜんぶ Tactna にお任せ！
             </h1>
-            <p className="text-lg font-bold mt-4 text-gray-700">
+            <p className="text-sm sm:text-base md:text-lg font-bold mt-4 text-gray-700">
               Tactna一つでサービス展開に必要なものすべてをカバー
             </p>
-            <ul className="list-disc font-bold list-inside mt-4 text-gray-700">
+            <ul className="text-sm sm:text-base md:text-lg  list-disc font-bold list-inside mt-4 text-gray-700">
               <li>認証認可機能</li>
               <li>IDに紐づく様々なデータ利活用</li>
               <li>マイページ、業務管理ページ</li>
@@ -28,7 +30,7 @@ export default function Hero() {
           </div>
 
           {/* 右側の画像エリア */}
-          <div className="w-1/2 flex justify-end">
+          <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
             <Image
               src="/laptop.png"
               alt="Beautiful travel destination"
@@ -36,7 +38,9 @@ export default function Hero() {
               height={225}
               quality={75}
               sizes="100vw"
-              className="object-contain max-w-[600px] h-auto"
+              // object-contain に加え、w-full かつ max-w-md（約448px）を指定し、
+              // 小さい画面でも画像が横幅を超えないようにする
+              className="object-contain w-full max-w-md h-auto"
             />
           </div>
         </div>
@@ -44,32 +48,28 @@ export default function Hero() {
 
       {/* お客様ロゴエリア（最下部） */}
       <div className="w-full mt-auto text-center py-8 bg-gray-100">
-        <h2 className="text-2xl font-bold text-gray-800">TC3のお客様</h2>
+        <h2 className="text-xl md:text-2xl font-bold text-gray-800">
+          TC3のお客様
+        </h2>
         <div className="flex flex-wrap items-center justify-center gap-6 mt-4">
-          <Image
-            src="/client_logos/msad.png"
-            alt="Customer 1"
-            width={250}
-            height={100}
-          />
-          <Image
-            src="/client_logos/msad.png"
-            alt="Customer 1"
-            width={250}
-            height={100}
-          />{" "}
-          <Image
-            src="/client_logos/msad.png"
-            alt="Customer 1"
-            width={250}
-            height={100}
-          />{" "}
-          <Image
-            src="/client_logos/msad.png"
-            alt="Customer 1"
-            width={250}
-            height={100}
-          />
+          {/* 各ロゴをラッパーdivで囲み、max-w-full を指定することで
+              画面幅が狭い場合にも横にあふれず折り返されるようにする */}
+          {[
+            "/client_logos/msad.png",
+            "/client_logos/msad.png",
+            "/client_logos/msad.png",
+            "/client_logos/msad.png",
+          ].map((src, index) => (
+            <div key={index} className="w-auto">
+              <Image
+                src={src}
+                alt={`Customer ${index + 1}`}
+                width={250}
+                height={100}
+                className="max-w-full h-auto"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

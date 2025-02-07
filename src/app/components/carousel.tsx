@@ -27,27 +27,33 @@ const features = [
 
 export default function FeatureCarousel() {
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-100 py-8">
-      <h1 className="text-4xl font-bold mb-4">Tactnaの特徴</h1>
+    <div className="flex w-full flex-col items-center justify-center bg-gray-100 py-8 sm:py-10 md:py-12 lg:py-16">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+        Tactnaの特徴
+      </h1>
       <Carousel
         opts={{
           align: "start",
           loop: true,
         }}
         plugins={[Autoplay({ delay: 5000 })]}
-        className="w-full max-w-4xl"
+        className="w-full max-w-md sm:max-w-lg md:max-w-4xl lg:max-w-6xl p-10"
       >
-        <CarouselContent>
-          {features.map((feature, index) => (
-            <CarouselItem key={index} className="">
-              <div className="p-2">
-                <Card>
-                  <CardContent className="flex flex-col items-center justify-center p-6 text-center">
-                    <span className="text-xl font-bold">{feature.title}</span>
-                    <p className="text-sm text-gray-500 mt-2">
-                      {feature.description}
-                    </p>
-                    <div className="mt-4">
+        <div className="flex flex-col w-full items-center justify-center">
+          <CarouselContent>
+            {features.map((feature, index) => (
+              <CarouselItem key={index}>
+                {/* CarouselItem 内のパディングをレスポンシブに変更 */}
+                <div className="p-2 sm:p-4 md:p-6 lg:p-8">
+                  <Card>
+                    {/* CardContent のパディングやテキストサイズを調整 */}
+                    <CardContent className="flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 lg:p-10 text-center">
+                      <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold">
+                        {feature.title}
+                      </span>
+                      <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-500 mt-2">
+                        {feature.description}
+                      </p>
                       <Image
                         src={feature.image_path}
                         alt="Feature Image"
@@ -55,17 +61,19 @@ export default function FeatureCarousel() {
                         height={225}
                         quality={75}
                         sizes="100vw"
-                        className="object-contain max-w-[600px] h-auto"
+                        className="object-contain w-full sm:w-4/5 md:w-3/4 lg:w-2/3 mt-4"
                       />
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="flex justify-center space-x-8 w-full mt-4">
+            <CarouselPrevious className="px-8" />
+            <CarouselNext className="px-8" />
+          </div>
+        </div>
       </Carousel>
     </div>
   );

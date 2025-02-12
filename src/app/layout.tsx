@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
-import Clarity from "@microsoft/clarity";
-import { useEffect } from "react";
-import GoogleAnalytics from "@/components/GoogleAnalytics/GoogleAnalytics";
+import ClarityInit from "@/components/analysis/Clarity";
+import GoogleAnalytics from "@/components/analysis/GoogleAnalytics";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
@@ -20,15 +19,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  useEffect(() => {
-    const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
-    if (CLARITY_ID && typeof window !== "undefined") {
-      Clarity.init(CLARITY_ID);
-    }
-  }, []);
   return (
     <html lang="en">
       <head>
+        <ClarityInit />
         <GoogleAnalytics />
       </head>
       <body className={`${notoSansJP.variable} antialiased`}>{children}</body>

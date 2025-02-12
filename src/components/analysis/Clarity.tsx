@@ -1,6 +1,5 @@
 "use client";
 
-import "./globals.css";
 import Clarity from "@microsoft/clarity";
 import { useEffect } from "react";
 

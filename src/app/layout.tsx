@@ -3,6 +3,7 @@ import { Noto_Sans_JP } from "next/font/google";
 import "./globals.css";
 import ClarityInit from "@/components/analysis/Clarity";
 import GoogleAnalytics from "@/components/analysis/GoogleAnalytics";
+import { Suspense } from "react";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
@@ -23,7 +24,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <ClarityInit />
-        <GoogleAnalytics />
+        <Suspense>
+          <GoogleAnalytics />
+        </Suspense>
       </head>
       <body className={`${notoSansJP.variable} antialiased`}>{children}</body>
     </html>

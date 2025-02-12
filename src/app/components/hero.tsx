@@ -1,4 +1,5 @@
 import Image from "next/image";
+import LogoMarquee from "./logo_marquee";
 
 export default function Hero() {
   return (
@@ -27,12 +28,12 @@ export default function Hero() {
           </div>
 
           {/* 右側の画像エリア */}
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
+          <div className="w-full md:w-2/3 flex justify-center mt-8 md:mt-0">
             <Image
-              src="/laptop.png"
-              alt="laptop"
-              width={600}
-              height={225}
+              src="/hero.png"
+              alt="hero"
+              width={800}
+              height={425}
               quality={75}
               sizes="100vw"
               className="object-contain w-full max-w-md h-auto"
@@ -42,28 +43,11 @@ export default function Hero() {
       </div>
 
       {/* お客様ロゴエリア（最下部） */}
-      <div className="w-full mt-auto text-center py-8 bg-gray-100">
-        <h2 className="text-xl md:text-2xl font-bold text-gray-800">
+      <div className="w-full mt-auto text-center py-8">
+        <h2 className="text-2xl md:text-4xl font-bold text-gray-800">
           TC3のお客様
         </h2>
-        <div className="flex flex-wrap items-center justify-center gap-6 mt-4">
-          {[
-            "/client_logos/msad.png",
-            "/client_logos/msad.png",
-            "/client_logos/msad.png",
-            "/client_logos/msad.png",
-          ].map((src, index) => (
-            <div key={index} className="w-auto">
-              <Image
-                src={src}
-                alt={`Customer ${index + 1}`}
-                width={250}
-                height={100}
-                className="max-w-full h-auto"
-              />
-            </div>
-          ))}
-        </div>
+        <LogoMarquee />
       </div>
     </div>
   );

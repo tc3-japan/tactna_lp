@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-[#1D2E4A] text-white pt-10 pb-4">
-      <div className="flex flex-row justify-center space-x-20 py-10">
+      <div className="flex flex-col md:flex-row items-center justify-center space-y-10 md:space-y-0 md:space-x-20 py-10">
         <div className="flex flex-col space-y-2">
           <Image src="/tc3_logo.svg" alt="Logo" width={120} height={100} />
           <p className="text-lg font-semibold">TC3 株式会社</p>

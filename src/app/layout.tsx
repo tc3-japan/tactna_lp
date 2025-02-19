@@ -4,6 +4,7 @@ import "./globals.css";
 import ClarityInit from "@/components/analysis/Clarity";
 import GoogleAnalytics from "@/components/analysis/GoogleAnalytics";
 import { Suspense } from "react";
+import DownloadMaterialButton from "./components/DownloadMaterialButton";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
@@ -17,9 +18,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <head>
@@ -28,7 +27,9 @@ export default function RootLayout({
           <GoogleAnalytics />
         </Suspense>
       </head>
-      <body className={`${notoSansJP.variable} antialiased`}>{children}</body>
+      <body className={`${notoSansJP.variable} antialiased`}>
+        {children} <DownloadMaterialButton />
+      </body>
     </html>
   );
 }

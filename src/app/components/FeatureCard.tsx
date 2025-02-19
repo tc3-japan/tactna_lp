@@ -3,11 +3,18 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 interface FeatureCardProps {
-  num: number;
   isReverse: boolean;
+  title: string;
+  description: string;
+  filename: string;
 }
 
-export default function FeatureCard({ num, isReverse }: FeatureCardProps) {
+export default function FeatureCard({
+  title,
+  description,
+  filename,
+  isReverse,
+}: FeatureCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -43,8 +50,8 @@ export default function FeatureCard({ num, isReverse }: FeatureCardProps) {
     >
       <div className="md:w-1/2 relative">
         <Image
-          src={`/tactna_features/${num}.png`}
-          alt={`Feature ${num} image`}
+          src={filename}
+          alt={`Feature: ${title}`}
           width={600}
           height={400}
           className="object-cover w-full h-full"
@@ -53,12 +60,10 @@ export default function FeatureCard({ num, isReverse }: FeatureCardProps) {
       </div>
       <div className="md:w-1/2 p-10 flex flex-col justify-center">
         <h3 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-600 mb-6">
-          Feature {num}
+          {title}
         </h3>
         <p className="text-gray-600 text-lg leading-relaxed mb-8">
-          This is an example description for Feature {num}. It highlights the
-          elegance and benefits of our design with clear, concise, and engaging
-          details that captivate and inform the user.
+          {description}
         </p>
       </div>
     </article>

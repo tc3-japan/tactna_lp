@@ -93,11 +93,11 @@ export default function FeatureComparisonTable() {
   const categoryRendered: Record<string, boolean> = {};
 
   return (
-    <div className="flex flex-col items-center justify-center bg-white py-8 px-4 sm:px-6 md:px-8">
+    <div className="flex flex-col items-center justify-center  py-8 px-4 sm:px-6 md:px-8">
       <h1 className="max-w-5xl text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8">
         開発者を認証認可・ID管理関連業務から解放
       </h1>
-      <table className="w-full md:w-max border-collapse bg-white rounded-md mx-4 sm:mx-8 lg:mx-20">
+      <table className="w-full md:w-max border-collapse rounded-md mx-4 sm:mx-8 lg:mx-20">
         <thead>
           <tr>
             <th className="p-2 sm:p-3 md:p-4 border-b-2 border-gray-200">

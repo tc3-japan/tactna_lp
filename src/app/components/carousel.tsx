@@ -38,7 +38,7 @@ export default function FeatureCarousel() {
           align: "start",
           loop: true,
         }}
-        plugins={[Autoplay({ delay: 5000 })]}
+        plugins={[Autoplay({ delay: 3000, stopOnMouseEnter: true })]}
         className="w-full sm:max-w-3xl md:max-w-4xl lg:max-w-6xl p-10"
       >
         <div className="flex flex-col w-full items-center justify-center">

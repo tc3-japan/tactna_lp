@@ -13,7 +13,7 @@ export default function Navbar() {
                 alt="Tactna Logo"
                 width={1200}
                 height={296}
-                className="object-contain max-w-[200px] h-auto"
+                className="object-contain max-w-[140px] md:max-w-[200px] h-auto"
               />
             </div>
             <div className="hidden md:block">

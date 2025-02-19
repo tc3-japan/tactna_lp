@@ -57,7 +57,7 @@ export default function Features() {
     <section className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-600 mb-16">
-          Discover Our Product Features
+          Tactnaの特徴
         </h2>
         <div className="space-y-10">
           {initialFeatures.map((data) => (

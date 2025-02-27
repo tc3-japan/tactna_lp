@@ -6,14 +6,14 @@ export default function Navbar() {
     <>
       <nav className="fixed w-full bg-white shadow-md z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16 items-center">
-            <div className="flex-shrink-0">
+          <div className="flex justify-between min-h-12 items-center">
+            <div className="py-2 md:py-4">
               <Image
                 src="/tactna_logo_2.png"
                 alt="Tactna Logo"
-                width={1200}
-                height={296}
-                className="object-contain max-w-[140px] md:max-w-[200px] h-auto"
+                width={200}
+                height={100}
+                className="object-contain max-w-[120px] md:max-w-[160px] h-auto"
               />
             </div>
             <div className="hidden md:block">

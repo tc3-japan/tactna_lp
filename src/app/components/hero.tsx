@@ -28,7 +28,7 @@ export default function Hero() {
           </div>
 
           {/* 右側の画像エリア */}
-          <div className="max-w-2xl  flex justify-center mt-8 md:mt-0">
+          <div className="max-w-3xl  flex justify-center mt-8 md:mt-0">
             <Image
               src="/hero.png"
               alt="hero"

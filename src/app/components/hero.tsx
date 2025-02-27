@@ -5,9 +5,9 @@ export default function Hero() {
   return (
     <div className="overflow-x-hidden pt-20 md:pt-16 md:h-screen flex flex-col">
       <div className="flex-grow flex items-center justify-center">
-        <div className="max-w-7xl w-full mx-auto flex flex-col md:flex-row items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-center px-4 sm:px-6 lg:px-8">
           {/* 左側の説明エリア */}
-          <div className="w-full md:w-2/3 text-center md:text-left md:pl-12">
+          <div className="max-w-5xl text-center md:text-left md:pl-12">
             <h1 className="text-lg sm:text-xl lg:text-2xl font-bold pb-4 text-blue-700">
               Unleash your potential with Tactna
             </h1>
@@ -28,7 +28,7 @@ export default function Hero() {
           </div>
 
           {/* 右側の画像エリア */}
-          <div className="w-full  flex justify-center mt-8 md:mt-0">
+          <div className="max-w-2xl  flex justify-center mt-8 md:mt-0">
             <Image
               src="/hero.png"
               alt="hero"

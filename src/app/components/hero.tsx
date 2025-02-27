@@ -28,15 +28,15 @@ export default function Hero() {
           </div>
 
           {/* 右側の画像エリア */}
-          <div className="w-full md:w-2/3 flex justify-center mt-8 md:mt-0">
+          <div className="w-full  flex justify-center mt-8 md:mt-0">
             <Image
               src="/hero.png"
               alt="hero"
-              width={800}
+              width={1200}
               height={425}
               quality={75}
               sizes="100vw"
-              className="object-contain w-full max-w-md h-auto"
+              className="object-contain h-auto"
             />
           </div>
         </div>

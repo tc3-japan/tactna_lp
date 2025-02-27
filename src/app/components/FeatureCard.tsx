@@ -60,7 +60,12 @@ export default function FeatureCard({
       </div>
       <div className="md:w-1/2 p-10 flex flex-col justify-center">
         <h3 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-600 mb-6">
-          {title}
+          {title.split("\n").map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
         </h3>
         <p className="text-gray-600 text-lg leading-relaxed mb-8">
           {description}

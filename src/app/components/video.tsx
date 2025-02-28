@@ -26,7 +26,6 @@ export default function VideoPlayer() {
     if (target) {
       observer.observe(target);
     }
-    console.log(isPlaying);
     return () => {
       if (target) {
         observer.unobserve(target);

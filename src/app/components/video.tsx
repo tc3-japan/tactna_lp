@@ -45,10 +45,10 @@ export default function VideoPlayer() {
             playing={isPlaying}
             controls={false}
             width="100%"
-            volume={0.2}
+            muted={true}
             height="100%"
             config={{
-              youtube: { playerVars: { controls: 0 } }, // YouTubeのコントロールバー非表示
+              youtube: { playerVars: { controls: 0, autoplay: 1 } }, // YouTubeのコントロールバー非表示
             }}
             wrapper={({ children }) => (
               <div className="absolute top-0 left-0 w-full h-full">

@@ -16,8 +16,9 @@ export default function Navbar() {
                 className="object-contain max-w-[120px] md:max-w-[160px] h-auto"
               />
             </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-center space-x-4">
+
+            <div className="ml-10 flex items-center space-x-4">
+              <div className="hidden md:block">
                 <Link
                   href="#features"
                   className="text-gray-700 hover:text-gray-900 px-3 py-2"
@@ -30,10 +31,10 @@ export default function Navbar() {
                 >
                   比較
                 </Link>
-                <Button className="bg-blue-600">
-                  <Link href="#inquiry">お問い合わせ</Link>
-                </Button>
               </div>
+              <Button className="bg-blue-600">
+                <Link href="#inquiry">お問い合わせ</Link>
+              </Button>
             </div>
           </div>
         </div>

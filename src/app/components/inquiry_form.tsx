@@ -21,7 +21,10 @@ const HubSpotForm = () => {
   }, []);
 
   return (
-    <div className="max-w-lg md:max-w-3xl lg:max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div
+      className="max-w-lg md:max-w-3xl lg:max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8"
+      id="inquiry"
+    >
       <div id="hubspot-form"></div>
     </div>
   );

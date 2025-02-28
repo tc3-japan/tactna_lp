@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-
+import Link from "next/link";
 export default function Navbar() {
   return (
     <>
@@ -18,25 +18,21 @@ export default function Navbar() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-center space-x-4">
-                <a
+                <Link
                   href="#features"
                   className="text-gray-700 hover:text-gray-900 px-3 py-2"
                 >
                   特徴
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="#feature-table"
                   className="text-gray-700 hover:text-gray-900 px-3 py-2"
                 >
-                  詳細
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-700 hover:text-gray-900 px-3 py-2"
-                >
-                  ブログ
-                </a>
-                <Button className="bg-blue-600">お問い合わせ</Button>
+                  比較
+                </Link>
+                <Button className="bg-blue-600">
+                  <Link href="#inquiry">お問い合わせ</Link>
+                </Button>
               </div>
             </div>
           </div>

@@ -59,7 +59,7 @@ export default function FeatureCard({
         <div className="absolute inset-0"></div>
       </div>
       <div className="md:w-1/2 p-10 flex flex-col justify-center">
-        <h3 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-600 mb-6">
+        <h3 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-600 mb-6">
           {title.split("\n").map((line, index) => (
             <React.Fragment key={index}>
               {line}

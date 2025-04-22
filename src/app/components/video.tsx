@@ -2,13 +2,18 @@
 
 import ReactPlayer from "react-player";
 import React, { useEffect, useState, useRef } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function VideoPlayer() {
   const [isClient, setIsClient] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const playerRef = useRef(null);
   const t = useTranslations("video");
+  const locale = useLocale();
+  const videoUrl =
+    locale === "ja"
+      ? "https://www.youtube.com/watch?v=9uCoQdjKpck"
+      : "https://youtu.be/E0Zj5sAErfs";
 
   useEffect(() => {
     setIsClient(true);
@@ -43,7 +48,7 @@ export default function VideoPlayer() {
       <div ref={playerRef} className="relative w-full aspect-video">
         {isClient ? (
           <ReactPlayer
-            url="https://www.youtube.com/watch?v=9uCoQdjKpck"
+            url={videoUrl}
             playing={isPlaying}
             controls={false}
             width="100%"

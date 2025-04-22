@@ -4,6 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import "../globals.css";
 import { routing } from "@/i18n/routing";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
+import DownloadMaterialButton from "../components/DownloadMaterialButton";
 
 export const metadata = {
   title: "Tactna",
@@ -30,6 +31,11 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <NextIntlClientProvider locale={locale}>{children}</NextIntlClientProvider>
+    <NextIntlClientProvider locale={locale}>
+      <>
+        {children}
+        <DownloadMaterialButton />
+      </>
+    </NextIntlClientProvider>
   );
 }

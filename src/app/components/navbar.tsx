@@ -1,7 +1,10 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+
 export default function Navbar() {
+  const t = useTranslations("navbar");
   return (
     <>
       <nav className="fixed w-full bg-white shadow-md z-50">
@@ -23,7 +26,7 @@ export default function Navbar() {
                   href="#features"
                   className="text-gray-700 hover:text-gray-900 px-3 py-2"
                 >
-                  特徴
+                  {t("features")}
                 </Link>
                 <Link
                   href="#feature-table"

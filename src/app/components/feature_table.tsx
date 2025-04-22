@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { IoTriangleOutline } from "react-icons/io5";
 
 type MarkType = "check" | "triangle" | "";
@@ -17,68 +18,69 @@ interface ComparisonPlan {
 }
 
 export default function FeatureComparisonTable() {
+  const t = useTranslations("compare");
   const plans: ComparisonPlan[] = [
     {
       features: [
         {
-          category: "認証認可",
-          name: "ユーザ単位",
+          category: t("auth_id"),
+          name: t("unit_user"),
           scratch: "triangle",
           idaas: "check",
           tactna: "check",
         },
         {
-          category: "認証認可",
-          name: "組織単位",
+          category: t("auth_id"),
+          name: t("unit_organization"),
           scratch: "triangle",
           idaas: "",
           tactna: "check",
         },
         {
-          category: "認証認可",
-          name: "複数サービス対応",
+          category: t("auth_id"),
+          name: t("multi_service"),
           scratch: "triangle",
           idaas: "",
           tactna: "check",
         },
         {
-          category: "ポータル",
-          name: "ユーザ向け",
+          category: t("portal_ui"),
+          name: t("ui_toc"),
           scratch: "triangle",
           idaas: "",
           tactna: "check",
         },
         {
-          category: "ポータル",
-          name: "業務向け",
+          category: t("portal_ui"),
+          name: t("ui_tob"),
           scratch: "triangle",
           idaas: "",
           tactna: "check",
         },
         {
-          category: "ポータル",
-          name: "独自コンポーネント",
+          category: t("portal_ui"),
+          name: t("ui_custom"),
           scratch: "triangle",
           idaas: "",
           tactna: "check",
         },
         {
-          category: "拡張",
-          name: "課金管理",
+          category: t("customizing"),
+          name: t("billing"),
           scratch: "triangle",
           idaas: "",
           tactna: "check",
         },
         {
-          category: "拡張",
-          name: "契約・サービス管理",
+          category: t("customizing"),
+          name: t("contract"),
           scratch: "triangle",
           idaas: "",
           tactna: "check",
         },
         {
-          category: "拡張",
-          name: "社内システム連携",
+          category: t("customizing"),
+          name: t("system_integration"),
           scratch: "triangle",
           idaas: "",
           tactna: "check",
@@ -101,21 +103,21 @@ export default function FeatureComparisonTable() {
       id="feature-table"
     >
       <h1 className="max-w-5xl text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8">
-        開発者を認証認可・ID管理関連業務から解放
+        {t("title")}
       </h1>
       <div className="max-w-full sm:flex sm:justify-center overflow-x-auto md:overflow-x-hidden ">
         <table className="border-collapse rounded-md mx-4 sm:mx-8 lg:mx-20 px-40">
           <thead>
             <tr>
               <th className="p-2 sm:p-3 md:p-4 border-b-2 border-gray-200 min-w-[100px]">
-                機能概要
+                {t("feature")}
               </th>
               <th className="p-2 sm:p-3 md:p-4 border-b-2 border-gray-200 min-w-[180px]"></th>
               <th className="p-2 sm:p-3 md:p-4 border-b-2 border-gray-200 min-w-[80px]">
                 IDaaS
               </th>
               <th className="p-2 sm:p-3 md:p-4 border-b-2 border-gray-200 min-w-[80px]">
-                スクラッチ開発
+                {t("scratch")}
               </th>
               <th className="justify-center p-2 sm:p-3 md:p-4 border-b-2 border-gray-200 min-w-[80px]">
                 <Image

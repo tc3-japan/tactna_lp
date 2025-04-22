@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
+import { ReactNode } from "react";
 import "./globals.css";
 import ClarityInit from "@/components/analysis/Clarity";
 import GoogleAnalytics from "@/components/analysis/GoogleAnalytics";
 import { Suspense } from "react";
 import DownloadMaterialButton from "./components/DownloadMaterialButton";
+import { NextIntlClientProvider } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
@@ -12,15 +15,22 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "Tactna 認証認可・ID管理基盤",
+  title: "Tactna: 認証認可・ID管理基盤",
   description: "Tactnaは、認証認可・ID管理基盤を提供するサービスです。",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+  params,
+}: {
+  children: ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
-    <html lang="en">
+    <html lang="ja">
       <head>
         <ClarityInit />
         <Suspense>
@@ -28,7 +38,8 @@ export default function RootLayout({
         </Suspense>
       </head>
       <body className={`${notoSansJP.variable} antialiased`}>
-        {children} <DownloadMaterialButton />
+        <NextIntlClientProvider locale="ja">{children}</NextIntlClientProvider>
+        <DownloadMaterialButton />
       </body>
     </html>
   );

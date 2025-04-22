@@ -1,22 +1,17 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 interface FeatureCardProps {
   isReverse: boolean;
-  title: string;
-  description: string;
-  filename: string;
+  index: string;
 }
 
-export default function FeatureCard({
-  title,
-  description,
-  filename,
-  isReverse,
-}: FeatureCardProps) {
+export default function FeatureCard({ index, isReverse }: FeatureCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const t = useTranslations("features.cards." + index);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -50,8 +45,8 @@ export default function FeatureCard({
     >
       <div className="md:w-1/2 relative">
         <Image
-          src={filename}
-          alt={`Feature: ${title}`}
+          src={`/tactna_features/${index}.png`}
+          alt={`Feature: ${t("title")}`}
           width={600}
           height={400}
           className="object-cover w-full h-full"
@@ -59,16 +54,11 @@ export default function FeatureCard({
         <div className="absolute inset-0"></div>
       </div>
       <div className="md:w-1/2 p-10 flex flex-col justify-center">
-        <h3 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-600 mb-6">
-          {title.split("\n").map((line, index) => (
-            <React.Fragment key={index}>
-              {line}
-              <br />
-            </React.Fragment>
-          ))}
+        <h3 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-600 mb-8 py-2">
+          {t("title")}
         </h3>
         <p className="text-gray-600 text-lg leading-relaxed mb-8">
-          {description}
+          {t("desc")}
         </p>
       </div>
     </article>

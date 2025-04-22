@@ -2,9 +2,11 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { useLocale } from "next-intl";
 
 export default function DownloadMaterialButton() {
   const [showDownload, setShowDownload] = useState(false);
+  const locale = useLocale();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,7 +21,7 @@ export default function DownloadMaterialButton() {
 
   return (
     <AnimatePresence>
-      {showDownload && (
+      {showDownload && locale == "ja" && (
         <motion.a
           href="https://info.tc3.co.jp/hubfs/Tactna/tactna_a4_DL%E7%94%A8.pdf"
           target="_blank"

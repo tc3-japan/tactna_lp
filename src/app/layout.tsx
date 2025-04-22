@@ -5,7 +5,7 @@ import "./globals.css";
 import ClarityInit from "@/components/analysis/Clarity";
 import GoogleAnalytics from "@/components/analysis/GoogleAnalytics";
 import { Suspense } from "react";
-import DownloadMaterialButton from "./components/DownloadMaterialButton";
+
 import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 
@@ -39,7 +39,6 @@ export default async function RootLayout({
       </head>
       <body className={`${notoSansJP.variable} antialiased`}>
         <NextIntlClientProvider locale="ja">{children}</NextIntlClientProvider>
-        <DownloadMaterialButton />
       </body>
     </html>
   );

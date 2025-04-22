@@ -32,11 +32,11 @@ export default function Navbar() {
                   href="#feature-table"
                   className="text-gray-700 hover:text-gray-900 px-3 py-2"
                 >
-                  比較
+                  {t("compare")}
                 </Link>
               </div>
               <Button className="bg-blue-600">
-                <Link href="#inquiry">お問い合わせ</Link>
+                <Link href="#inquiry">{t("contact")}</Link>
               </Button>
             </div>
           </div>

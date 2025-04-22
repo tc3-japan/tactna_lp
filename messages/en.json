@@ -1,15 +1,67 @@
 {
   "navbar": {
-    "features": "Features"
+    "features": "Features",
+    "compare": "Compare",
+    "contact": "Contact us"
   },
   "hero": {
     "catchcopy": "Unleash your potential with Tactna",
-    "title": "Authentication, Authorization, and ID Management\nLeave it all to Tactna!",
+    "title1": "Deploy Your Services",
+    "title2": "Instantly with Tactna",
     "desc": "Tactna covers everything you need to launch your service",
     "feature1": "Authentication & Authorization",
     "feature2": "Utilize various data linked to IDs",
     "feature3": "My Page, Admin Dashboard",
     "feature4": "Customizable for various business workflows",
     "customers": "TC3 Clients"
+  },
+  "video": {
+    "title": "Demo Video"
+  },
+  "features": {
+    "title": "Features of Tactna",
+    "cards": {
+      "1": {
+        "title": "ID & Account Mastery",
+        "desc": "Tactna is a platform that brings together the best practices in ID and account management. Compared to a full scratch build, it significantly reduces initial setup costs and enables a 36% reduction over 5 years."
+      },
+      "2": {
+        "title": "Top-Notch Security",
+        "desc": "With built-in industry-standard authentication features, Tactna implements high-security design by default. By incorporating TC3's best practices, it quickly realizes a common authentication base for multiple services. Additionally, as a fully managed service, it spares you the operational burdens."
+      },
+      "3": {
+        "title": "B2B Ready",
+        "desc": "For B2B services, ensuring a service supports application usage rights and contract plans, in addition to simple user login, is crucial. Tactna has these implementations in place by default, eliminating the need for complex requirements definition or design."
+      },
+      "4": {
+        "title": "Ultimate Flexibility",
+        "desc": "In business expansion, seamless operation involves integration with core systems like payment services, internal contract management systems, and accounting systems. Tactna can flexibly adapt to different specifications from each service provider."
+      },
+      "5": {
+        "title": "Efficient Operations",
+        "desc": "By implementing portal features, which are said to account for 20% of development costs, it alleviates the need for engineers to handle ID-related tasks after going live."
+      },
+      "6": {
+        "title": "Data-Centric Insights",
+        "desc": "Tactna functions as a platform for analyzing active user numbers and company profiles. It enables a comprehensive view of user statuses, forming the basis for various initiatives."
+      }
+    }
+  },
+  "compare": {
+    "title": "Liberate Developers from ID Management",
+    "auth_id": "Authentication and Authorization",
+    "unit_user": "Per User",
+    "unit_organization": "Per Organization",
+    "multi_service": "Multiple Services Support",
+    "portal_ui": "Portal Interface",
+    "ui_toc": "UI for ToC Users",
+    "ui_tob": "UI for ToB Users",
+    "ui_custom": "Custom Components",
+    "customizing": "Extended Features",
+    "billing": "Billing Management",
+    "contract": "Contract and Service Management",
+    "system_integration": "System Integration",
+    "feature": "Feature",
+    "scratch": "Scratch Dev."
   }
 }

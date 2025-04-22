@@ -2,11 +2,13 @@
 
 import ReactPlayer from "react-player";
 import React, { useEffect, useState, useRef } from "react";
+import { useTranslations } from "next-intl";
 
 export default function VideoPlayer() {
   const [isClient, setIsClient] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const playerRef = useRef(null);
+  const t = useTranslations("video");
 
   useEffect(() => {
     setIsClient(true);
@@ -36,7 +38,7 @@ export default function VideoPlayer() {
   return (
     <div className="max-w-5xl mx-auto px-4 pt-12 md:pb-60">
       <h2 className="text-3xl md:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-600 mb-16">
-        Tactnaデモ動画
+        {t("title")}
       </h2>
       <div ref={playerRef} className="relative w-full aspect-video">
         {isClient ? (

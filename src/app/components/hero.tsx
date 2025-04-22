@@ -1,7 +1,9 @@
 import Image from "next/image";
 import LogoMarquee from "./logo_marquee";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("hero");
   return (
     <div className="overflow-x-hidden pt-20 md:pt-16 md:h-screen flex flex-col">
       <div className="flex-grow flex items-center justify-center">
@@ -9,21 +11,21 @@ export default function Hero() {
           {/* 左側の説明エリア */}
           <div className="max-w-5xl text-center md:text-left md:pl-12">
             <h1 className="text-lg sm:text-xl lg:text-2xl font-bold pb-4 text-blue-700">
-              Unleash your potential with Tactna
+              {t("catchcopy")}
             </h1>
             <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold">
-              認証認可・ID管理は
+              {t("title1")}
               <br />
-              ぜんぶ Tactna にお任せ！
+              {t("title2")}
             </h1>
             <p className="text-sm sm:text-base md:text-lg font-bold mt-4 text-gray-700">
-              Tactna一つでサービス展開に必要なものすべてをカバー
+              {t("desc")}
             </p>
             <ul className="text-sm sm:text-base md:text-lg  list-disc font-bold list-inside mt-4 text-gray-700">
-              <li>認証認可機能</li>
-              <li>IDに紐づく様々なデータ利活用</li>
-              <li>マイページ、業務管理ページ</li>
-              <li>様々な業務フローに合わせたカスタマイズ​</li>
+              <li>{t("feature1")}</li>
+              <li>{t("feature2")}</li>
+              <li>{t("feature3")}</li>
+              <li>{t("feature4")}</li>
             </ul>
           </div>
 
@@ -45,7 +47,7 @@ export default function Hero() {
       {/* お客様ロゴエリア（最下部） */}
       <div className="w-full mt-auto text-center py-8">
         <h2 className="text-2xl md:text-4xl font-bold text-gray-800">
-          TC3のお客様
+          {t("customers")}
         </h2>
         <LogoMarquee />
       </div>

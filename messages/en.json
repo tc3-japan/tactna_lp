@@ -13,7 +13,7 @@
     "feature2": "Utilize various data linked to IDs",
     "feature3": "My Page, Admin Dashboard",
     "feature4": "Customizable for various business workflows",
-    "customers": "TC3 Clients"
+    "customers": "Our Clients"
   },
   "video": {
     "title": "Demo Video"
@@ -63,5 +63,10 @@
     "system_integration": "System Integration",
     "feature": "Feature",
     "scratch": "Scratch Dev."
+  },
+  "company": {
+    "name": "TC3 Inc.",
+    "address1": "〒100-0004 Tokyo, Chiyoda-ku, Otemachi 1-6-1",
+    "address2": "Otemachi Building 4F FINOLAB"
   }
 }

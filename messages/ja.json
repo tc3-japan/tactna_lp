@@ -63,5 +63,10 @@
     "system_integration": "システム連携",
     "feature": "機能概要",
     "scratch": "スクラッチ開発"
+  },
+  "company": {
+    "name": "TC3 株式会社",
+    "address1": "〒100-0004 東京都千代田区大手町一丁目6番1号",
+    "address2": "大手町ビル4階 FINOLAB"
   }
 }

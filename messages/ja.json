@@ -1,0 +1,16 @@
+{
+  "navbar": {
+    "features": "機能",
+    "pricing": "料金"
+  },
+  "hero": {
+    "catchcopy": "Unleash your potential with Tactna",
+    "title": "認証認可・ID管理は\nぜんぶ Tactna にお任せ！",
+    "desc": "Tactna一つでサービス展開に必要なものすべてをカバー",
+    "feature1": "認証認可機能",
+    "feature2": "IDに紐づく様々なデータ利活用",
+    "feature3": "マイページ、業務管理ページ",
+    "feature4": "様々な業務フローに合わせたカスタマイズ​",
+    "customers": "TC3のお客様"
+  }
+}

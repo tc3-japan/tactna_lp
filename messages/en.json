@@ -1,0 +1,15 @@
+{
+  "navbar": {
+    "features": "Features"
+  },
+  "hero": {
+    "catchcopy": "Unleash your potential with Tactna",
+    "title": "Authentication, Authorization, and ID Management\nLeave it all to Tactna!",
+    "desc": "Tactna covers everything you need to launch your service",
+    "feature1": "Authentication & Authorization",
+    "feature2": "Utilize various data linked to IDs",
+    "feature3": "My Page, Admin Dashboard",
+    "feature4": "Customizable for various business workflows",
+    "customers": "TC3 Clients"
+  }
+}

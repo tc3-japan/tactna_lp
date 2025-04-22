@@ -30,10 +30,6 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
-      <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale}>{children}</NextIntlClientProvider>
   );
 }

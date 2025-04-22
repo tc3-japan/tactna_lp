@@ -12,7 +12,7 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "Tactna 認証認可・ID管理基盤",
+  title: "Tactna: 認証認可・ID管理基盤",
   description: "Tactnaは、認証認可・ID管理基盤を提供するサービスです。",
 };
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <head>
         <ClarityInit />
         <Suspense>

@@ -1,9 +1,10 @@
 import Image from "next/image";
 import LogoMarquee from "./logo_marquee";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const locale = useLocale();
   return (
     <div className="overflow-x-hidden pt-20 md:pt-16 md:h-screen flex flex-col">
       <div className="flex-grow flex items-center justify-center">
@@ -32,7 +33,7 @@ export default function Hero() {
           {/* 右側の画像エリア */}
           <div className="max-w-3xl  flex justify-center mt-8 md:mt-0">
             <Image
-              src="/hero.png"
+              src={`/${locale}/hero.png`}
               alt="hero"
               width={1200}
               height={425}

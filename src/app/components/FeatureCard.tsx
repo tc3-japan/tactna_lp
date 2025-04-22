@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 interface FeatureCardProps {
   isReverse: boolean;
@@ -12,6 +12,7 @@ export default function FeatureCard({ index, isReverse }: FeatureCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const t = useTranslations("features.cards." + index);
+  const locale = useLocale();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -45,7 +46,7 @@ export default function FeatureCard({ index, isReverse }: FeatureCardProps) {
     >
       <div className="md:w-1/2 relative">
         <Image
-          src={`/tactna_features/${index}.png`}
+          src={`/${locale}/tactna_features/${index}.png`}
           alt={`Feature: ${t("title")}`}
           width={600}
           height={400}

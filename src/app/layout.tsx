@@ -8,16 +8,25 @@ import { Suspense } from "react";
 
 import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
 const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Tactna: 認証認可・ID管理基盤",
-  description: "Tactnaは、認証認可・ID管理基盤を提供するサービスです。",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 export default async function RootLayout({
   children,

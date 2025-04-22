@@ -1,15 +1,24 @@
 import { notFound } from "next/navigation";
 import { ReactNode } from "react";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import "../globals.css";
+import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import DownloadMaterialButton from "../components/DownloadMaterialButton";
 
-export const metadata = {
-  title: "Tactna",
-  description: "Tactna LP",
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata" });
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));

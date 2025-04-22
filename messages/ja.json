@@ -68,5 +68,9 @@
     "name": "TC3 株式会社",
     "address1": "〒100-0004 東京都千代田区大手町一丁目6番1号",
     "address2": "大手町ビル4階 FINOLAB"
+  },
+  "metadata": {
+    "title": "Tactna | 認証認可・ID管理基盤",
+    "description": "Tactnaは、TC3株式会社が提供する認証認可・ID管理のためのSaaSです。"
   }
 }

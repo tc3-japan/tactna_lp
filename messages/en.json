@@ -65,12 +65,12 @@
     "scratch": "Scratch Dev."
   },
   "company": {
-    "name": "TC3 Inc.",
-    "address1": "〒100-0004 Tokyo, Chiyoda-ku, Otemachi 1-6-1",
-    "address2": "Otemachi Building 4F FINOLAB"
+    "name": "TC3 K.K.",
+    "address1": "Otemachi Building 4F FINOLAB,"
+    "address2": "Otemachi 1-6-1, Chiyoda-ku, Tokyo, Japan",
   },
   "metadata": {
-    "title": "Tactna | Authentication & Authorization Platform",
-    "description": "Tactna is a platform that provides authentication and authorization services, enabling rapid deployment of your services."
+    "title": "Tactna | Account & User Management Platform",
+    "description": "Tactna is a platform that provides account management, authentication and authorization services, enabling rapid deployment of your services."
   }
 }

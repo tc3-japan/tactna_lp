@@ -6,7 +6,7 @@ import Footer from "./components/footer";
 import HubSpotForm from "./components/inquiry_form";
 import Features from "./components/features";
 import VideoPlayer from "./components/video";
-import DownloadMaterialButton from "./components/DownloadMaterialButton";
+import ImageWithBorderAndDelete from "./components/banner";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       <FeatureTable />
       <HubSpotForm />
       <Footer />
-      <DownloadMaterialButton />
+      <ImageWithBorderAndDelete />
     </>
   );
 }

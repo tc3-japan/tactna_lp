@@ -24,15 +24,22 @@ export default function Navbar() {
               <div className="hidden md:block">
                 <Link
                   href="#features"
-                  className="text-gray-700 hover:text-gray-900 px-3 py-2"
+                  className="text-gray-700 hover:text-blue-600 px-3 py-2"
                 >
                   {t("features")}
                 </Link>
                 <Link
                   href="#feature-table"
-                  className="text-gray-700 hover:text-gray-900 px-3 py-2"
+                  className="text-gray-700 hover:text-blue-600 px-3 py-2"
                 >
                   {t("compare")}
+                </Link>
+                <Link
+                  href="https://info.tc3.co.jp/hubfs/Tactna/tactna_a4_DL%E7%94%A8.pdf"
+                  target="_blank"
+                  className="text-gray-700 hover:text-blue-600 px-3 py-2"
+                >
+                  {t("download_material")}
                 </Link>
               </div>
               <Button className="bg-blue-600">

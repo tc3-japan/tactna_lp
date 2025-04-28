@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect, use } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const Banner: React.FC = () => {
@@ -14,7 +14,10 @@ const Banner: React.FC = () => {
   if (!visible) return null;
 
   const handleBannerClick = () => {
-    window.open("https://dummy.com", "_blank");
+    window.open(
+      "https://info.tc3.co.jp/saas-id-management-guide-book",
+      "_blank"
+    );
   };
 
   return (
@@ -27,13 +30,15 @@ const Banner: React.FC = () => {
       >
         &#x2715;
       </button>
-      <div className="cursor-pointer" onClick={handleBannerClick}>
+      <div
+        className="cursor-pointer relative w-[192px] h-[108px] sm:w-[320px] sm:h-[180px]"
+        onClick={handleBannerClick}
+      >
         <Image
           src="/whitepaper.png"
           alt="white paper"
-          width={300}
-          height={300}
-          className="block max-w-full h-auto rounded-md"
+          fill
+          className="object-contain rounded-md"
           priority
         />
       </div>

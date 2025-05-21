@@ -27,7 +27,7 @@ const caseList = [
 const CaseSection = () => (
   <section className="py-12 bg-gray-50">
     <div className="max-w-7xl mx-auto px-4">
-      <h2 className="text-2xl font-bold mb-8 text-center">導入事例</h2>
+      <h2 className="text-2xl font-bold mb-8 text-center">関連事例</h2>
       <div className="grid gap-6 md:grid-cols-2">
         {caseList.map((c) => (
           <CaseCard key={c.link} {...c} />

@@ -3,7 +3,7 @@ import CaseCard from "@/app/components/CaseCard";
 
 const caseList = [
   {
-    title: "",
+    title: "MS&ADインターリスク総研株式会社",
     description:
       "今回の共通認証基盤プロジェクトは当社がデジタルサービスを複数展開するうえで非常に重要な機能です。様々なサービスが考えられるなかで、網羅的にカバーできる内容として実装ができたことを嬉しく思います。TC3さんとはPoC、要件定義から膝詰めでのディスカッションを通してしっかりとした共通認証基盤を実装することができました。",
     imageUrl: "/client_logos/cli_msad.jpg",

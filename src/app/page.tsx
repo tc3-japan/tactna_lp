@@ -7,12 +7,14 @@ import HubSpotForm from "./components/inquiry_form";
 import Features from "./components/features";
 import VideoPlayer from "./components/video";
 import ImageWithBorderAndDelete from "./components/banner";
+import CaseSection from "./components/CaseSection";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Hero />
+      <CaseSection />
       <VideoPlayer />
       <Features />
       <FeatureTable />

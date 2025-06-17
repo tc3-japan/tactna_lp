@@ -12,7 +12,7 @@ export default function VideoPlayer() {
   const locale = useLocale();
   const videoUrl =
     locale === "ja"
-      ? "https://youtu.be/3LdT0uahCto"
+      ? "https://youtu.be/IfQyOyljmUc"
       : "https://youtu.be/E0Zj5sAErfs";
 
   useEffect(() => {

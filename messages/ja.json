@@ -46,7 +46,8 @@
         "title": "顧客IDを中核としたデータ利活用の基盤",
         "desc": "アクティブユーザー数、企業毎のプロファイルを分析する基盤としてTactnaは機能します。ユーザーの状況を一元的に確認することができるため、様々な施策のベースとなります。"
       }
-    }
+    },
+    "readmore": "もっと見る"
   },
   "compare": {
     "title": "開発者を認証認可・ID管理関連業務から解放",
@@ -73,5 +74,71 @@
   "metadata": {
     "title": "Tactna | 認証認可・ID管理基盤",
     "description": "Tactnaは、TC3株式会社が提供する認証認可・ID管理のためのSaaSです。"
+  },
+  "compare_detail": {
+    "subtitle": "Tactnaなら、開発工数を大幅に削減しながら高機能なID管理基盤を実現",
+    "recommended": "おすすめ",
+    "coverage_rate": "機能カバー率",
+    "features_implemented": "機能実装済み",
+    "general_idaas": "一般的なIDaaS",
+    "scratch_dev_full": "フルスクラッチ開発",
+    "dev_effort": "開発工数",
+    "massive": "膨大",
+    "high_cost": "高コスト",
+    "dev_operation_load": "開発・運用負荷",
+    "feature_detail_comparison": "機能詳細比較",
+    "standard_feature": "標準機能として提供",
+    "dev_implementation_required": "開発・実装が必要",
+    "not_supported": "非対応",
+    "all_features_standard": "すべての機能が標準搭載",
+    "reduce_dev_effort_enterprise": "開発工数を削減しながら、エンタープライズレベルのID管理基盤を実現します。",
+    "learn_more": "詳しく見る",
+    "tactna_benefits": {
+      "all_features": "すべての機能を標準搭載",
+      "reduce_initial_cost": "初期費用を大幅削減",
+      "five_year_cost_reduction": "5年間で36%のコスト削減"
+    },
+    "idaas_limitations": {
+      "basic_auth_only": "基本的な認証機能のみ",
+      "limited_b2b": "B2B対応は限定的",
+      "low_customization": "カスタマイズ性が低い"
+    },
+    "scratch_challenges": {
+      "all_in_house": "すべて自社開発が必要",
+      "high_security_risk": "セキュリティリスクが高い",
+      "continuous_operation_cost": "運用・保守コストが継続"
+    },
+    "readmore": "もっと見る"
+  },
+  "features_readmore": "Read More",
+  "case": {
+    "title": "関連事例",
+    "details": "詳細を見る",
+    "msad": {
+      "company": "MS&ADインターリスク総研株式会社",
+      "quote": "今回の共通認証基盤プロジェクトは当社がデジタルサービスを複数展開するうえで非常に重要な機能です。様々なサービスが考えられるなかで、網羅的にカバーできる内容として実装ができたことを嬉しく思います。TC3さんとはPoC、要件定義から膝詰めでのディスカッションを通してしっかりとした共通認証基盤を実装することができました。",
+      "department": "デジタルイノベーション本部 DI推進部",
+      "person": "芝田 達郎 様"
+    },
+    "gsearch": {
+      "company": "株式会社ジー・サーチ",
+      "quote": "Tactna Identity Platformを採用することで、最終的に実現したい「データ利活用」に向けた基盤を整えることができました。今後はすべてのサービスをTactna上に乗せることを計画しており、認証認可はもちろん、組織の概念の実装など、本来はアプリケーション毎に検討するアイデンティティ領域の検討・実装コストが個別に不要となることで、アプリケーション開発に集中できることを期待しています。また、Tactnaの今後のパワフルなアップデートに期待したいと考えています。",
+      "department": "デジタルソリューショングループ グループ長",
+      "person": "稲垣 明 様"
+    }
+  },
+  "banner": {
+    "close": "閉じる"
+  },
+  "download": {
+    "button": "資料をダウンロード"
+  },
+  "structured_data": {
+    "company_name": "TC3 株式会社",
+    "address_street": "大手町一丁目6番1号 大手町ビル4階 FINOLAB",
+    "address_locality": "千代田区",
+    "address_region": "東京都",
+    "website_description": "Tactnaは、TC3株式会社が提供する認証認可・ID管理のためのSaaSです。",
+    "product_description": "認証認可・ID管理のためのSaaS基盤"
   }
 }

@@ -2,11 +2,12 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function DownloadMaterialButton() {
   const [showDownload, setShowDownload] = useState(false);
   const locale = useLocale();
+  const t = useTranslations("download");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,7 +44,7 @@ export default function DownloadMaterialButton() {
             width={24}
             height={24}
           />
-          <span className="font-semibold text-lg">資料をダウンロード</span>
+          <span className="font-semibold text-lg">{t("button")}</span>
         </motion.a>
       )}
     </AnimatePresence>

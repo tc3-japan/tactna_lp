@@ -46,7 +46,8 @@
         "title": "Data-Centric Insights",
         "desc": "Tactna functions as a platform for analyzing active user numbers and company profiles. It enables a comprehensive view of user statuses, forming the basis for various initiatives."
       }
-    }
+    },
+    "readmore": "Read More"
   },
   "compare": {
     "title": "Liberate Developers from ID Management",
@@ -73,5 +74,71 @@
   "metadata": {
     "title": "Tactna | Account & User Management Platform",
     "description": "Tactna is a platform that provides account management, authentication and authorization services, enabling rapid deployment of your services."
+  },
+  "compare_detail": {
+    "subtitle": "With Tactna, achieve a high-performance ID management platform while significantly reducing development effort",
+    "recommended": "Recommended",
+    "coverage_rate": "Feature Coverage",
+    "features_implemented": "Features Implemented",
+    "general_idaas": "General IDaaS",
+    "scratch_dev_full": "Full Scratch Development",
+    "dev_effort": "Development Effort",
+    "massive": "Massive",
+    "high_cost": "High Cost",
+    "dev_operation_load": "Dev & Operation Load",
+    "feature_detail_comparison": "Detailed Feature Comparison",
+    "standard_feature": "Provided as standard feature",
+    "dev_implementation_required": "Development required",
+    "not_supported": "Not supported",
+    "all_features_standard": "All features included as standard",
+    "reduce_dev_effort_enterprise": "Achieve enterprise-level ID management infrastructure while reducing development effort.",
+    "learn_more": "Learn More",
+    "tactna_benefits": {
+      "all_features": "All features included",
+      "reduce_initial_cost": "Significantly reduce initial costs",
+      "five_year_cost_reduction": "36% cost reduction over 5 years"
+    },
+    "idaas_limitations": {
+      "basic_auth_only": "Basic authentication only",
+      "limited_b2b": "Limited B2B support",
+      "low_customization": "Low customization flexibility"
+    },
+    "scratch_challenges": {
+      "all_in_house": "All in-house development required",
+      "high_security_risk": "High security risk",
+      "continuous_operation_cost": "Continuous operation & maintenance costs"
+    },
+    "readmore": "Read More"
+  },
+  "features_readmore": "Read More",
+  "case": {
+    "title": "Related Cases",
+    "details": "View Details",
+    "msad": {
+      "company": "MS&AD InterRisk Research & Consulting, Inc.",
+      "quote": "This common authentication infrastructure project is a crucial feature for our company to deploy multiple digital services. I am pleased that we were able to implement comprehensive coverage among various possible services. Through PoC and requirements definition discussions with TC3, we were able to implement a solid common authentication infrastructure.",
+      "department": "Digital Innovation Division, DI Promotion Department",
+      "person": "Mr. Tatsuro Shibata"
+    },
+    "gsearch": {
+      "company": "G-Search Limited",
+      "quote": "By adopting the Tactna Identity Platform, we were able to establish the foundation for the 'data utilization' we ultimately want to achieve. We plan to migrate all services onto Tactna in the future. By eliminating the individual costs of considering and implementing identity domains that would normally be considered for each application, including authentication/authorization and organizational concepts, we expect to be able to focus on application development. We also look forward to powerful updates to Tactna in the future.",
+      "department": "Digital Solutions Group, Group Manager",
+      "person": "Mr. Akira Inagaki"
+    }
+  },
+  "banner": {
+    "close": "Close"
+  },
+  "download": {
+    "button": "Download Materials"
+  },
+  "structured_data": {
+    "company_name": "TC3 K.K.",
+    "address_street": "Otemachi Building 4F FINOLAB, Otemachi 1-6-1",
+    "address_locality": "Chiyoda-ku",
+    "address_region": "Tokyo",
+    "website_description": "Tactna is a platform that provides account management, authentication and authorization services, enabling rapid deployment of your services.",
+    "product_description": "Account & User Management Platform"
   }
 }

@@ -1,6 +1,6 @@
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
-import FeatureTable from "../components/feature_table";
+import FeatureComparison from "../components/feature_comparison";
 import Footer from "../components/footer";
 import HubSpotForm from "../components/inquiry_form";
 import Features from "../components/features";
@@ -25,7 +25,7 @@ export default async function Home({
       <Hero />
       <VideoPlayer />
       <Features />
-      <FeatureTable />
+      <FeatureComparison />
       <HubSpotForm />
       <Footer />
     </>

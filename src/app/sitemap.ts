@@ -1,18 +1,24 @@
 import type { MetadataRoute } from "next";
+import { routing } from "@/i18n/routing";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: "https://www.tactna.com",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1,
-    },
-    {
-      url: "https://www.tactna.com/en",
-      lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1,
-    },
-  ];
+  const baseUrl = "https://www.tactna.com";
+  const lastModified = new Date();
+  
+  const routes = routing.locales.map((locale) => ({
+    url: locale === "ja" ? baseUrl : `${baseUrl}/${locale}`,
+    lastModified,
+    changeFrequency: "weekly" as const,
+    priority: 1,
+    alternates: {
+      languages: Object.fromEntries(
+        routing.locales.map((l) => [
+          l,
+          l === "ja" ? baseUrl : `${baseUrl}/${l}`
+        ])
+      )
+    }
+  }));
+  
+  return routes;
 }

@@ -36,7 +36,7 @@ export default function Features() {
               onClick={() => setShowMore(true)}
               className="px-6 py-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600"
             >
-              Read More
+              {t("readmore") || "Read More"}
             </button>
           </div>
         )}

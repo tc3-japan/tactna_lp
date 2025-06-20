@@ -29,7 +29,7 @@ export default function Navbar() {
                   {t("features")}
                 </Link>
                 <Link
-                  href="#feature-table"
+                  href="#feature-comparison"
                   className="text-gray-700 hover:text-blue-600 px-3 py-2"
                 >
                   {t("compare")}

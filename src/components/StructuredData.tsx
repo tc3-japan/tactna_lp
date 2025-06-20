@@ -1,5 +1,9 @@
+"use client";
+import { useTranslations } from "next-intl";
+
 export default function StructuredData({ locale }: { locale: string }) {
   const isJapanese = locale === "ja";
+  const t = useTranslations("structured_data");
   
   const structuredData = {
     "@context": "https://schema.org",
@@ -7,7 +11,7 @@ export default function StructuredData({ locale }: { locale: string }) {
       {
         "@type": "Organization",
         "@id": "https://www.tactna.com/#organization",
-        "name": isJapanese ? "TC3 株式会社" : "TC3 K.K.",
+        "name": t("company_name"),
         "url": "https://www.tactna.com",
         "logo": {
           "@type": "ImageObject",
@@ -15,11 +19,9 @@ export default function StructuredData({ locale }: { locale: string }) {
         },
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": isJapanese 
-            ? "大手町一丁目6番1号 大手町ビル4階 FINOLAB" 
-            : "Otemachi Building 4F FINOLAB, Otemachi 1-6-1",
-          "addressLocality": isJapanese ? "千代田区" : "Chiyoda-ku",
-          "addressRegion": isJapanese ? "東京都" : "Tokyo",
+          "streetAddress": t("address_street"),
+          "addressLocality": t("address_locality"),
+          "addressRegion": t("address_region"),
           "postalCode": "100-0004",
           "addressCountry": "JP"
         }
@@ -29,9 +31,7 @@ export default function StructuredData({ locale }: { locale: string }) {
         "@id": "https://www.tactna.com/#website",
         "url": "https://www.tactna.com",
         "name": "Tactna",
-        "description": isJapanese 
-          ? "Tactnaは、TC3株式会社が提供する認証認可・ID管理のためのSaaSです。"
-          : "Tactna is a platform that provides account management, authentication and authorization services, enabling rapid deployment of your services.",
+        "description": t("website_description"),
         "publisher": {
           "@id": "https://www.tactna.com/#organization"
         },
@@ -41,9 +41,7 @@ export default function StructuredData({ locale }: { locale: string }) {
         "@type": "Product",
         "@id": "https://www.tactna.com/#product",
         "name": "Tactna",
-        "description": isJapanese 
-          ? "認証認可・ID管理のためのSaaS基盤"
-          : "Account & User Management Platform",
+        "description": t("product_description"),
         "brand": {
           "@id": "https://www.tactna.com/#organization"
         },

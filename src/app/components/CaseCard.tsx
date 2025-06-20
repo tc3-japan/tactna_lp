@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 interface CaseCardProps {
   title: string;
@@ -20,6 +22,7 @@ const CaseCard: React.FC<CaseCardProps> = ({
   department,
   personName,
 }) => {
+  const t = useTranslations("case");
   let nameBlock = null;
   if (companyName || department || personName) {
     nameBlock = (
@@ -66,7 +69,7 @@ const CaseCard: React.FC<CaseCardProps> = ({
             rel="noopener noreferrer"
             className="inline-block px-6 py-2 text-base font-semibold bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-200 shadow"
           >
-            詳細を見る
+            {t("details")}
           </a>
         </div>
       )}

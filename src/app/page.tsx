@@ -4,7 +4,7 @@ import Navbar from "./components/navbar";
 import ImageWithBorderAndDelete from "./components/banner";
 import CaseSection from "./components/CaseSection";
 import FeatureComparison from "./components/feature_comparison";
-import Features from "./components/features";
+import FeaturesEnhanced from "./components/FeaturesEnhanced";
 import Footer from "./components/footer";
 import HubSpotForm from "./components/inquiry_form";
 import VideoPlayer from "./components/video";
@@ -16,7 +16,7 @@ export default function Home() {
       <Hero />
       <CaseSection />
       <VideoPlayer />
-      <Features />
+      <FeaturesEnhanced />
       <FeatureComparison />
       <HubSpotForm />
       <Footer />

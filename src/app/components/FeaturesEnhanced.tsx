@@ -6,7 +6,7 @@ import Image from "next/image";
 
 interface Feature {
   id: string;
-  icon: JSX.Element;
+  icon: React.ReactElement;
   color: string;
   bgGradient: string;
   accentGradient: string;

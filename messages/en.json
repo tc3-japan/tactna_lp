@@ -21,6 +21,7 @@
   },
   "features": {
     "title": "Features of Tactna",
+    "subtitle": "Achieve enterprise-level ID management infrastructure while significantly reducing development effort",
     "cards": {
       "1": {
         "title": "ID & Account Mastery",
@@ -47,7 +48,16 @@
         "desc": "Tactna functions as a platform for analyzing active user numbers and company profiles. It enables a comprehensive view of user statuses, forming the basis for various initiatives."
       }
     },
-    "readmore": "Read More"
+    "readmore": "Read More",
+    "stats": {
+      "cost_reduction": "Total cost reduction over 5 years",
+      "cost_comparison": "Compared to full scratch development",
+      "deployment_time": "Fastest deployment period",
+      "deployment_period": "2 weeks",
+      "deployment_desc": "From PoC to production",
+      "support": "Enterprise support",
+      "support_desc": "Expert team available 24/7"
+    }
   },
   "compare": {
     "title": "Liberate Developers from ID Management",

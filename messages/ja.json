@@ -21,6 +21,7 @@
   },
   "features": {
     "title": "Tactnaの特徴",
+    "subtitle": "エンタープライズレベルのID管理基盤を、開発工数を大幅に削減しながら実現",
     "cards": {
       "1": {
         "title": "ID・アカウント管理の\nベストプラクティスを集結",
@@ -47,7 +48,16 @@
         "desc": "アクティブユーザー数、企業毎のプロファイルを分析する基盤としてTactnaは機能します。ユーザーの状況を一元的に確認することができるため、様々な施策のベースとなります。"
       }
     },
-    "readmore": "もっと見る"
+    "readmore": "もっと見る",
+    "stats": {
+      "cost_reduction": "5年間のトータルコスト削減",
+      "cost_comparison": "フルスクラッチ開発と比較",
+      "deployment_time": "最短導入期間",
+      "deployment_period": "2週間",
+      "deployment_desc": "PoCから本番稼働まで",
+      "support": "エンタープライズサポート",
+      "support_desc": "専門チームが常時対応"
+    }
   },
   "compare": {
     "title": "開発者を認証認可・ID管理関連業務から解放",

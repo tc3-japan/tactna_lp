@@ -146,7 +146,7 @@ export default function FeaturesEnhanced() {
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            エンタープライズレベルのID管理基盤を、開発工数を大幅に削減しながら実現
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -273,17 +273,17 @@ export default function FeaturesEnhanced() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
               <div className="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                 <div className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2">36%</div>
-                <div className="text-gray-600 font-medium">5年間のトータルコスト削減</div>
-                <div className="mt-4 text-sm text-gray-500">フルスクラッチ開発と比較</div>
+                <div className="text-gray-600 font-medium">{t("stats.cost_reduction")}</div>
+                <div className="mt-4 text-sm text-gray-500">{t("stats.cost_comparison")}</div>
               </div>
             </div>
             
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
               <div className="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <div className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">2週間</div>
-                <div className="text-gray-600 font-medium">最短導入期間</div>
-                <div className="mt-4 text-sm text-gray-500">PoCから本番稼働まで</div>
+                <div className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">{t("stats.deployment_period")}</div>
+                <div className="text-gray-600 font-medium">{t("stats.deployment_time")}</div>
+                <div className="mt-4 text-sm text-gray-500">{t("stats.deployment_desc")}</div>
               </div>
             </div>
             
@@ -291,8 +291,8 @@ export default function FeaturesEnhanced() {
               <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
               <div className="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                 <div className="text-5xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">24/7</div>
-                <div className="text-gray-600 font-medium">エンタープライズサポート</div>
-                <div className="mt-4 text-sm text-gray-500">専門チームが常時対応</div>
+                <div className="text-gray-600 font-medium">{t("stats.support")}</div>
+                <div className="mt-4 text-sm text-gray-500">{t("stats.support_desc")}</div>
               </div>
             </div>
           </div>

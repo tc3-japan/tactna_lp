@@ -150,5 +150,14 @@
     "address_region": "Tokyo",
     "website_description": "Tactna is a platform that provides account management, authentication and authorization services, enabling rapid deployment of your services.",
     "product_description": "Account & User Management Platform"
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Stay updated with the latest news, technical articles, and announcements from Tactna",
+    "readMore": "Read More",
+    "relatedPosts": "Related Posts",
+    "publishedDate": "Published",
+    "previous": "Previous",
+    "next": "Next"
   }
 }

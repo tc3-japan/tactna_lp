@@ -17,7 +17,7 @@ const baseURL = `https://${MICROCMS_SERVICE_DOMAIN}/api/v1`;
 
 async function fetchFromMicroCMS(
   endpoint: string,
-  params?: Record<string, any>
+  params?: Record<string, string | number | boolean>
 ) {
   const url = new URL(`${baseURL}/${endpoint}`);
 

@@ -71,6 +71,134 @@ body {
   }
 }
 
+@layer components {
+  /* Blog post prose styles */
+  .prose {
+    @apply text-base leading-relaxed text-gray-700 max-w-none;
+  }
+  
+  /* Headings */
+  .prose h1 {
+    @apply text-3xl md:text-4xl font-bold text-gray-900 mt-8 mb-4 leading-tight;
+  }
+  
+  .prose h2 {
+    @apply text-2xl md:text-3xl font-bold text-gray-900 mt-10 mb-4 leading-tight;
+  }
+  
+  .prose h3 {
+    @apply text-xl md:text-2xl font-bold text-gray-900 mt-8 mb-3 leading-tight;
+  }
+  
+  .prose h4 {
+    @apply text-lg md:text-xl font-bold text-gray-900 mt-6 mb-2 leading-tight;
+  }
+  
+  .prose h5 {
+    @apply text-base md:text-lg font-bold text-gray-900 mt-4 mb-2 leading-tight;
+  }
+  
+  .prose h6 {
+    @apply text-sm md:text-base font-bold text-gray-900 mt-4 mb-2 leading-tight;
+  }
+  
+  /* Paragraphs */
+  .prose p {
+    @apply text-gray-700 leading-relaxed mb-4;
+  }
+  
+  /* Lists */
+  .prose ul {
+    @apply text-gray-700 mb-4 pl-6 list-disc;
+  }
+  
+  .prose ol {
+    @apply text-gray-700 mb-4 pl-6 list-decimal;
+  }
+  
+  .prose li {
+    @apply text-gray-700 mb-1 leading-relaxed;
+  }
+  
+  /* Links */
+  .prose a {
+    @apply text-blue-600 no-underline hover:underline font-medium;
+  }
+  
+  /* Strong and emphasis */
+  .prose strong {
+    @apply text-gray-900 font-semibold;
+  }
+  
+  .prose em {
+    @apply italic;
+  }
+  
+  /* Blockquotes */
+  .prose blockquote {
+    @apply border-l-4 border-blue-200 bg-blue-50/50 p-4 my-6 rounded-lg;
+  }
+  
+  .prose blockquote p {
+    @apply italic text-gray-600 mb-0;
+  }
+  
+  /* Code */
+  .prose code {
+    @apply text-blue-600 bg-gray-100 px-2 py-1 rounded text-sm font-mono;
+  }
+  
+  .prose pre {
+    @apply bg-gray-900 text-gray-100 rounded-lg my-6 p-4 overflow-x-auto;
+  }
+  
+  .prose pre code {
+    @apply bg-transparent text-gray-100 p-0;
+  }
+  
+  /* Images */
+  .prose img {
+    @apply rounded-lg shadow-md my-6 mx-auto max-w-full h-auto;
+  }
+  
+  /* Tables */
+  .prose table {
+    @apply w-full border-collapse border border-gray-300 my-6;
+  }
+  
+  .prose th {
+    @apply bg-gray-50 border border-gray-300 px-4 py-2 text-left font-semibold text-gray-900;
+  }
+  
+  .prose td {
+    @apply border border-gray-300 px-4 py-2 text-gray-700;
+  }
+  
+  /* microCMS specific elements */
+  .prose iframe {
+    @apply my-6 rounded-lg shadow-md mx-auto max-w-full;
+  }
+  
+  /* Embedded content wrapper (YouTube, etc.) */
+  .prose div[style*="position: relative"] {
+    @apply my-6 rounded-lg overflow-hidden shadow-md;
+  }
+  
+  /* Horizontal rule */
+  .prose hr {
+    @apply border-t border-gray-300 my-8;
+  }
+  
+  /* First and last element margin adjustment */
+  .prose > *:first-child {
+    @apply mt-0;
+  }
+  
+  .prose > *:last-child {
+    @apply mb-0;
+  }
+}
+
 @layer utilities {
   .japanese-text {
     font-family: var(--font-noto-sans-jp), sans-serif;

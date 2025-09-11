@@ -29,7 +29,6 @@ async function fetchFromMicroCMS(
     });
   }
 
-  console.log("Fetching from:", url.toString());
 
   const response = await fetch(url.toString(), {
     headers: {

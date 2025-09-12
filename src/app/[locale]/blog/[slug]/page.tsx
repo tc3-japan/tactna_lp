@@ -9,6 +9,7 @@ import {
 import { getBlogId } from "@/lib/microcms/types";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
+import { stripHtmlTags, truncateDescription } from "@/lib/utils/seo";
 
 interface BlogDetailPageProps {
   params: Promise<{
@@ -29,7 +30,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: BlogDetailPageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const blog = await getBlogBySlug(slug);
 
   if (!blog) {
@@ -39,23 +40,49 @@ export async function generateMetadata({
   }
 
   const publishedDate = blog.publishedAt || blog.createdAt;
+  const plainTextContent = stripHtmlTags(blog.content);
+  const description = truncateDescription(plainTextContent, 160);
+  const baseUrl = "https://www.tactna.com";
+  const canonical = `${baseUrl}/${locale}/blog/${slug}`;
 
   return {
     title: blog.title,
-    description: blog.content.replace(/<[^>]*>/g, "").substring(0, 160),
+    description,
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical,
+      languages: {
+        ja: `${baseUrl}/ja/blog/${slug}`,
+        en: `${baseUrl}/en/blog/${slug}`,
+      },
+    },
     openGraph: {
       title: blog.title,
-      description: blog.content.replace(/<[^>]*>/g, "").substring(0, 160),
+      description,
+      url: canonical,
       images: blog.thumbnail ? [blog.thumbnail.url] : [],
       type: "article",
       publishedTime: publishedDate,
       modifiedTime: blog.updatedAt,
+      locale: locale === "ja" ? "ja_JP" : "en_US",
+      siteName: "Tactna",
     },
     twitter: {
       card: "summary_large_image",
       title: blog.title,
-      description: blog.content.replace(/<[^>]*>/g, "").substring(0, 160),
+      description,
       images: blog.thumbnail ? [blog.thumbnail.url] : [],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
   };
 }
@@ -72,29 +99,68 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
 
   const publishedDate = blog.publishedAt || blog.createdAt;
 
+  // 構造化データ（BlogPosting + BreadcrumbList）
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: blog.title,
-    datePublished: publishedDate,
-    dateModified: blog.updatedAt,
-    image: blog.thumbnail?.url,
-    author: {
-      "@type": "Organization",
-      name: "TACTNA",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "TACTNA",
-      logo: {
-        "@type": "ImageObject",
-        url: "/logo.svg",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": `https://www.tactna.com/${locale}/blog/${slug}#article`,
+        headline: blog.title,
+        description: stripHtmlTags(blog.content).substring(0, 160),
+        datePublished: publishedDate,
+        dateModified: blog.updatedAt,
+        image: blog.thumbnail?.url,
+        author: {
+          "@type": "Organization",
+          "@id": "https://www.tactna.com/#organization",
+          name: "TACTNA",
+        },
+        publisher: {
+          "@type": "Organization",
+          "@id": "https://www.tactna.com/#organization",
+          name: "TACTNA",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.tactna.com/logo.svg",
+          },
+        },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `https://www.tactna.com/${locale}/blog/${slug}`,
+        },
+        inLanguage: locale,
+        isPartOf: {
+          "@type": "Blog",
+          "@id": `https://www.tactna.com/${locale}/blog`,
+          name: "Tactna Blog",
+        },
       },
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://tactna.com/${locale}/blog/${slug}`,
-    },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `https://www.tactna.com/${locale}/blog/${slug}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "ホーム",
+            item: `https://www.tactna.com/${locale}`,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "ブログ",
+            item: `https://www.tactna.com/${locale}/blog`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: blog.title,
+            item: `https://www.tactna.com/${locale}/blog/${slug}`,
+          },
+        ],
+      },
+    ],
   };
 
   return (

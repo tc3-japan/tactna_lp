@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# サイトマップの場所を指定
+Sitemap: https://www.tactna.com/sitemap.xml
+
+# クローリングの制限設定
+Crawl-delay: 1
+
+# 検索エンジンに重要でないディレクトリをブロック
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /*.json$

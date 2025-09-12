@@ -7,6 +7,7 @@ import type { Blog } from "@/lib/microcms/types";
 import { getLocaleFromBlog } from "@/lib/microcms/types";
 import { BlogCard } from "./BlogCard";
 import { cn } from "@/lib/utils";
+import { calculateReadingTime } from "@/lib/utils/seo";
 
 interface BlogDetailProps {
   blog: Blog;
@@ -29,6 +30,11 @@ export function BlogDetail({
   const blogLocale = getLocaleFromBlog(blog);
   const publishedDate = blog.publishedAt || blog.createdAt;
   const [activeId, setActiveId] = useState<string>("");
+  
+  // 読了時間を計算
+  const readingTime = useMemo(() => {
+    return calculateReadingTime(blog.content, blogLocale);
+  }, [blog.content, blogLocale]);
   
   // 正規表現で見出しを抽出（サーバーサイド対応）
   const { processedContent, tocItems } = useMemo(() => {
@@ -129,9 +135,14 @@ export function BlogDetail({
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <time className="inline-block px-3 py-1 text-sm font-medium bg-blue-600/90 rounded-full mb-4">
-                  {formattedDate}
-                </time>
+                <div className="flex flex-wrap gap-3 mb-4">
+                  <time className="inline-block px-3 py-1 text-sm font-medium bg-blue-600/90 rounded-full">
+                    {formattedDate}
+                  </time>
+                  <span className="inline-block px-3 py-1 text-sm font-medium bg-green-600/90 rounded-full">
+                    読了時間: {readingTime}分
+                  </span>
+                </div>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
                   {blog.title}
                 </h1>
@@ -141,9 +152,14 @@ export function BlogDetail({
 
           {!blog.thumbnail && (
             <div className="p-8">
-              <time className="inline-block px-3 py-1 text-sm font-medium text-blue-600 bg-blue-50 rounded-full mb-6">
-                {formattedDate}
-              </time>
+              <div className="flex flex-wrap gap-3 mb-6">
+                <time className="inline-block px-3 py-1 text-sm font-medium text-blue-600 bg-blue-50 rounded-full">
+                  {formattedDate}
+                </time>
+                <span className="inline-block px-3 py-1 text-sm font-medium text-green-600 bg-green-50 rounded-full">
+                  読了時間: {readingTime}分
+                </span>
+              </div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 leading-tight">
                 {blog.title}
               </h1>

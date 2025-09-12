@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useEffect, useState, useMemo } from "react";
 import type { Blog } from "@/lib/microcms/types";
 import { getLocaleFromBlog } from "@/lib/microcms/types";
 import { BlogCard } from "./BlogCard";
@@ -13,6 +14,12 @@ interface BlogDetailProps {
   className?: string;
 }
 
+interface TocItem {
+  id: string;
+  text: string;
+  level: number;
+}
+
 export function BlogDetail({
   blog,
   relatedBlogs = [],
@@ -21,6 +28,39 @@ export function BlogDetail({
   const t = useTranslations("blog");
   const blogLocale = getLocaleFromBlog(blog);
   const publishedDate = blog.publishedAt || blog.createdAt;
+  const [activeId, setActiveId] = useState<string>("");
+  
+  // 正規表現で見出しを抽出（サーバーサイド対応）
+  const { processedContent, tocItems } = useMemo(() => {
+    const headingRegex = /<(h[1-4])[^>]*>(.*?)<\/h[1-4]>/gi;
+    const toc: TocItem[] = [];
+    let content = blog.content;
+    let match;
+    let index = 0;
+    
+    while ((match = headingRegex.exec(blog.content)) !== null) {
+      const [fullMatch, tag, text] = match;
+      const id = `heading-${index}`;
+      const level = parseInt(tag.substring(1));
+      
+      // 見出しにIDを付与
+      const newHeading = `<${tag} id="${id}">${text}</${tag}>`;
+      content = content.replace(fullMatch, newHeading);
+      
+      toc.push({
+        id,
+        text: text.replace(/<[^>]*>/g, ''), // HTMLタグを除去
+        level
+      });
+      
+      index++;
+    }
+    
+    return {
+      processedContent: content,
+      tocItems: toc
+    };
+  }, [blog.content]);
 
   const formattedDate = new Date(publishedDate).toLocaleDateString(
     blogLocale === "ja" ? "ja-JP" : "en-US",
@@ -30,6 +70,46 @@ export function BlogDetail({
       day: "numeric",
     }
   );
+
+  // Intersection Observerで現在表示中のセクションをハイライト
+  useEffect(() => {
+    if (tocItems.length === 0) return;
+
+    const headings = document.querySelectorAll('h1[id], h2[id], h3[id], h4[id]');
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      {
+        rootMargin: '-100px 0px -70% 0px',
+        threshold: 0
+      }
+    );
+
+    headings.forEach((heading) => {
+      observer.observe(heading);
+    });
+
+    return () => {
+      headings.forEach((heading) => {
+        observer.unobserve(heading);
+      });
+    };
+  }, [tocItems]);
+
+  const scrollToHeading = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 100;
+      const top = element.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
 
   return (
     <div className={cn("mx-auto max-w-4xl", className)}>
@@ -71,11 +151,41 @@ export function BlogDetail({
           )}
         </div>
 
+        {/* 目次部分 */}
+        {tocItems.length > 0 && (
+          <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+            <div className="border-l-4 border-blue-600 pl-4">
+              <h2 className="text-xl font-bold text-gray-900 mb-4">
+                {t("tableOfContents")}
+              </h2>
+              <nav className="space-y-2">
+                {tocItems.map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => scrollToHeading(item.id)}
+                    className={cn(
+                      "block w-full text-left transition-all duration-200 hover:text-blue-600",
+                      item.level === 1 && "font-bold text-base",
+                      item.level === 2 && "pl-4 text-sm",
+                      item.level === 3 && "pl-8 text-sm text-gray-600",
+                      item.level === 4 && "pl-12 text-xs text-gray-500",
+                      activeId === item.id && "text-blue-600 font-semibold"
+                    )}
+                  >
+                    {item.text}
+                  </button>
+                ))}
+              </nav>
+            </div>
+          </div>
+        )}
+
         {/* コンテンツ部分 */}
         <div className="bg-white rounded-xl shadow-lg p-8 md:p-12 mb-8 relative">
           <div
             className="prose"
-            dangerouslySetInnerHTML={{ __html: blog.content }}
+            dangerouslySetInnerHTML={{ __html: processedContent }}
           />
         </div>
       </article>

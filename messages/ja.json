@@ -2,6 +2,7 @@
   "navbar": {
     "features": "機能",
     "compare": "比較",
+    "blog": "ブログ",
     "download_material": "資料ダウンロード",
     "contact": "お問い合わせ"
   },
@@ -150,5 +151,15 @@
     "address_region": "東京都",
     "website_description": "Tactnaは、TC3株式会社が提供する認証認可・ID管理のためのSaaSです。",
     "product_description": "認証認可・ID管理のためのSaaS基盤"
+  },
+  "blog": {
+    "title": "ブログ",
+    "description": "Tactnaの最新情報、技術記事、お知らせなどをお届けします",
+    "readMore": "続きを読む",
+    "relatedPosts": "関連記事",
+    "publishedDate": "公開日",
+    "previous": "前へ",
+    "next": "次へ",
+    "tableOfContents": "目次"
   }
 }

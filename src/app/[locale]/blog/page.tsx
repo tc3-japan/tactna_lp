@@ -5,6 +5,7 @@ import { getBlogs } from "@/lib/microcms/client";
 import { getLocaleFromBlog } from "@/lib/microcms/types";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
+import { Link } from "@/i18n/navigation";
 
 interface BlogPageProps {
   params: Promise<{
@@ -75,19 +76,19 @@ export default async function BlogPage({
           {totalPages > 1 && (
             <nav className="mt-16 flex justify-center space-x-2">
               {currentPage > 1 && (
-                <a
-                  href={`/${locale}/blog?page=${currentPage - 1}`}
+                <Link
+                  href={`/blog?page=${currentPage - 1}`}
                   className="flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors"
                 >
                   {t("previous")}
-                </a>
+                </Link>
               )}
 
               {Array.from({ length: totalPages }, (_, i) => i + 1).map(
                 (pageNum) => (
-                  <a
+                  <Link
                     key={pageNum}
-                    href={`/${locale}/blog?page=${pageNum}`}
+                    href={`/blog?page=${pageNum}`}
                     className={`flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
                       pageNum === currentPage
                         ? "bg-blue-600 text-white border border-blue-600"
@@ -95,17 +96,17 @@ export default async function BlogPage({
                     }`}
                   >
                     {pageNum}
-                  </a>
+                  </Link>
                 )
               )}
 
               {currentPage < totalPages && (
-                <a
-                  href={`/${locale}/blog?page=${currentPage + 1}`}
+                <Link
+                  href={`/blog?page=${currentPage + 1}`}
                   className="flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors"
                 >
                   {t("next")}
-                </a>
+                </Link>
               )}
             </nav>
           )}

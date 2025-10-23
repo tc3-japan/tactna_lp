@@ -1,16 +1,18 @@
 import createNextIntlPlugin from "next-intl/plugin";
 import type { NextConfig } from "next";
+import nextra from "nextra";
 
+const withNextra = nextra({});
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'images.microcms-assets.io',
-        port: '',
-        pathname: '/**',
+        protocol: "https",
+        hostname: "images.microcms-assets.io",
+        port: "",
+        pathname: "/**",
       },
     ],
   },
@@ -25,4 +27,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withNextIntl(nextConfig);
+export default withNextIntl(withNextra(nextConfig));

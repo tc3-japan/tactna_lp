@@ -23,31 +23,16 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      // Not required, but good for SEO
-      lang="en"
-      // Required to be set
-      dir="ltr"
-      // Suggested by `next-themes` package https://github.com/pacocoursey/next-themes#with-app
-      suppressHydrationWarning
+    <Layout
+      banner={banner}
+      navbar={navbar}
+      pageMap={await getPageMap("/docs")}
+      editLink={false}
+      feedback={{ content: "About us", link: "https://tc3.co.jp" }}
+      footer={footer}
+      // ... Your additional layout options
     >
-      <Head
-      // ... Your additional head options
-      >
-        {/* Your additional tags should be passed as `children` of `<Head>` element */}
-      </Head>
-      <body>
-        <Layout
-          banner={banner}
-          navbar={navbar}
-          pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
-          footer={footer}
-          // ... Your additional layout options
-        >
-          {children}
-        </Layout>
-      </body>
-    </html>
+      {children}
+    </Layout>
   );
 }

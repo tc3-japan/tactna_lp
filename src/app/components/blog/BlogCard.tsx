@@ -26,7 +26,7 @@ export function BlogCard({ blog, className }: BlogCardProps) {
   return (
     <article className={cn('group relative flex flex-col bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden', className)}>
       <Link href={`/blog/${getBlogSlug(blog)}`} className="block">
-        <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
+        <div className="relative aspect-video overflow-hidden bg-gray-100">
           {blog.thumbnail ? (
             <Image
               src={blog.thumbnail.url}
@@ -36,7 +36,7 @@ export function BlogCard({ blog, className }: BlogCardProps) {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           ) : (
-            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+            <div className="flex h-full w-full items-center justify-center bg-linear-to-br from-gray-100 to-gray-200">
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto mb-2 bg-gray-300 rounded-full flex items-center justify-center">
                   <svg className="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -42,7 +42,7 @@ export default function VideoPlayer() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 pt-12 md:pb-60">
-      <h2 className="text-3xl md:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-600 mb-16">
+      <h2 className="text-3xl md:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-indigo-600 mb-16">
         {t("title")}
       </h2>
       <div ref={playerRef} className="relative w-full aspect-video">

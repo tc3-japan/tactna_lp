@@ -7,7 +7,7 @@ export default function Hero() {
   const locale = useLocale();
   return (
     <div className="overflow-x-hidden pt-20 md:pt-16 md:h-screen flex flex-col">
-      <div className="flex-grow flex items-center justify-center">
+      <div className="grow flex items-center justify-center">
         <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-center px-4 sm:px-6 lg:px-8">
           {/* 左側の説明エリア */}
           <div className="max-w-5xl text-center md:text-left md:pl-12">

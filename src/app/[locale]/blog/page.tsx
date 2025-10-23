@@ -58,7 +58,7 @@ export default async function BlogPage({
     <>
       <Navbar />
       <main className="min-h-screen pt-10">
-        <div className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16">
+        <div className="relative overflow-hidden bg-linear-to-br from-blue-50 via-white to-indigo-50 py-16">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl">
               {t("title")}

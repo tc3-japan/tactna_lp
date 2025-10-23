@@ -124,7 +124,7 @@ export function BlogDetail({
         {/* ヘッダー部分 */}
         <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
           {blog.thumbnail && (
-            <div className="relative aspect-[16/9] overflow-hidden">
+            <div className="relative aspect-video overflow-hidden">
               <Image
                 src={blog.thumbnail.url}
                 alt={blog.title}
@@ -133,7 +133,7 @@ export function BlogDetail({
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                 <div className="flex flex-wrap gap-3 mb-4">
                   <time className="inline-block px-3 py-1 text-sm font-medium bg-blue-600/90 rounded-full">

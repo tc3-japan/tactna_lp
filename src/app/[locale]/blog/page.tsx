@@ -6,20 +6,18 @@ import { getLocaleFromBlog } from "@/lib/microcms/types";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 import { Link } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 
-interface BlogPageProps {
-  params: Promise<{
-    locale: "ja" | "en";
-  }>;
-  searchParams: Promise<{
-    page?: string;
-  }>;
-}
+type BlogPageProps = {
+  params: Promise<{ locale?: "ja" | "en" }>;
+  searchParams: Promise<{ page?: string | string[] }>;
+};
 
 export async function generateMetadata({
   params,
 }: BlogPageProps): Promise<Metadata> {
-  const { locale } = await params;
+  const p = await params;
+  const locale = p?.locale ?? routing.defaultLocale;
   const t = await getTranslations({ locale, namespace: "blog" });
 
   return {
@@ -32,8 +30,11 @@ export default async function BlogPage({
   params,
   searchParams,
 }: BlogPageProps) {
-  const { locale } = await params;
-  const { page = "1" } = await searchParams;
+  const p = await params;
+  const s = await searchParams;
+  const locale = p?.locale ?? routing.defaultLocale;
+  const pageParam = Array.isArray(s?.page) ? s.page[0] : s?.page;
+  const page = pageParam ?? "1";
   const t = await getTranslations({ locale, namespace: "blog" });
 
   const currentPage = parseInt(page, 10);

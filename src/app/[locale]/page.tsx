@@ -18,9 +18,10 @@ export function generateStaticParams() {
 export default async function Home({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale?: string }>;
 }) {
-  const { locale } = await params;
+  const p = await params;
+  const locale = p?.locale ?? routing.defaultLocale;
   setRequestLocale(locale);
   return (
     <>

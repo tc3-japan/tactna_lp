@@ -27,7 +27,7 @@ export default function DownloadMaterialButton() {
           href="https://info.tc3.co.jp/hubfs/Tactna/tactna_a4_DL%E7%94%A8.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-3 right-3 md:bottom-5 md:right-5 flex items-center gap-1 md:gap-2 px-3 py-2 md:px-5 md:py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-full shadow-lg md:shadow-2xl border border-white hover:shadow-md md:hover:shadow-xl text-sm md:text-lg"
+          className="fixed bottom-3 right-3 md:bottom-5 md:right-5 flex items-center gap-1 md:gap-2 px-3 py-2 md:px-5 md:py-3 bg-linear-to-r from-blue-500 to-indigo-500 text-white rounded-full shadow-lg md:shadow-2xl border border-white hover:shadow-md md:hover:shadow-xl text-sm md:text-lg"
           initial={{ opacity: 0, y: 30, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 30, scale: 0.9 }}

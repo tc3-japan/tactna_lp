@@ -5,20 +5,19 @@ import { getBlogs } from "@/lib/microcms/client";
 import { getLocaleFromBlog } from "@/lib/microcms/types";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
+import { Link } from "@/i18n/navigation";
+import { routing } from "@/i18n/routing";
 
-interface BlogPageProps {
-  params: Promise<{
-    locale: "ja" | "en";
-  }>;
-  searchParams: Promise<{
-    page?: string;
-  }>;
-}
+type BlogPageProps = {
+  params: Promise<{ locale?: "ja" | "en" }>;
+  searchParams: Promise<{ page?: string | string[] }>;
+};
 
 export async function generateMetadata({
   params,
 }: BlogPageProps): Promise<Metadata> {
-  const { locale } = await params;
+  const p = await params;
+  const locale = p?.locale ?? routing.defaultLocale;
   const t = await getTranslations({ locale, namespace: "blog" });
 
   return {
@@ -31,8 +30,11 @@ export default async function BlogPage({
   params,
   searchParams,
 }: BlogPageProps) {
-  const { locale } = await params;
-  const { page = "1" } = await searchParams;
+  const p = await params;
+  const s = await searchParams;
+  const locale = p?.locale ?? routing.defaultLocale;
+  const pageParam = Array.isArray(s?.page) ? s.page[0] : s?.page;
+  const page = pageParam ?? "1";
   const t = await getTranslations({ locale, namespace: "blog" });
 
   const currentPage = parseInt(page, 10);
@@ -58,7 +60,7 @@ export default async function BlogPage({
     <>
       <Navbar />
       <main className="min-h-screen pt-10">
-        <div className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16">
+        <div className="relative overflow-hidden bg-linear-to-br from-blue-50 via-white to-indigo-50 py-16">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 lg:text-5xl">
               {t("title")}
@@ -75,19 +77,19 @@ export default async function BlogPage({
           {totalPages > 1 && (
             <nav className="mt-16 flex justify-center space-x-2">
               {currentPage > 1 && (
-                <a
-                  href={`/${locale}/blog?page=${currentPage - 1}`}
+                <Link
+                  href={`/blog?page=${currentPage - 1}`}
                   className="flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors"
                 >
                   {t("previous")}
-                </a>
+                </Link>
               )}
 
               {Array.from({ length: totalPages }, (_, i) => i + 1).map(
                 (pageNum) => (
-                  <a
+                  <Link
                     key={pageNum}
-                    href={`/${locale}/blog?page=${pageNum}`}
+                    href={`/blog?page=${pageNum}`}
                     className={`flex items-center px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
                       pageNum === currentPage
                         ? "bg-blue-600 text-white border border-blue-600"
@@ -95,17 +97,17 @@ export default async function BlogPage({
                     }`}
                   >
                     {pageNum}
-                  </a>
+                  </Link>
                 )
               )}
 
               {currentPage < totalPages && (
-                <a
-                  href={`/${locale}/blog?page=${currentPage + 1}`}
+                <Link
+                  href={`/blog?page=${currentPage + 1}`}
                   className="flex items-center px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors"
                 >
                   {t("next")}
-                </a>
+                </Link>
               )}
             </nav>
           )}

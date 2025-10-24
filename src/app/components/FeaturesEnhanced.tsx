@@ -133,7 +133,7 @@ export default function FeaturesEnhanced() {
   };
 
   return (
-    <section ref={sectionRef} className="py-24 bg-gradient-to-b from-gray-50 via-white to-gray-50 overflow-hidden" id="features">
+    <section ref={sectionRef} className="py-24 bg-linear-to-b from-gray-50 via-white to-gray-50 overflow-hidden" id="features">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -180,7 +180,7 @@ export default function FeaturesEnhanced() {
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
                             transition={{ type: "spring", stiffness: 200, damping: 10 }}
-                            className={`flex-shrink-0 p-4 rounded-2xl bg-white shadow-lg`}
+                            className={`shrink-0 p-4 rounded-2xl bg-white shadow-lg`}
                           >
                             <div className={`${featureData.find(f => f.id === selectedFeature)?.color}`}>
                               {featureData.find(f => f.id === selectedFeature)?.icon}
@@ -240,7 +240,7 @@ export default function FeaturesEnhanced() {
                 }`}
               >
                 <div className="flex items-center gap-4">
-                  <div className={`p-3 rounded-xl bg-gradient-to-br ${feature.bgGradient} ${feature.color}`}>
+                  <div className={`p-3 rounded-xl bg-linear-to-br ${feature.bgGradient} ${feature.color}`}>
                     {feature.icon}
                   </div>
                   <div className="flex-1">
@@ -252,7 +252,7 @@ export default function FeaturesEnhanced() {
                     <motion.div
                       initial={{ width: 0 }}
                       animate={{ width: "3rem" }}
-                      className={`h-1 bg-gradient-to-r ${feature.accentGradient} rounded-full`}
+                      className={`h-1 bg-linear-to-r ${feature.accentGradient} rounded-full`}
                     />
                   )}
                 </div>
@@ -270,27 +270,27 @@ export default function FeaturesEnhanced() {
         >
           <div className="grid md:grid-cols-3 gap-8">
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+              <div className="absolute inset-0 bg-linear-to-r from-blue-600 to-indigo-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
               <div className="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <div className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2">36%</div>
+                <div className="text-5xl font-bold bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2">36%</div>
                 <div className="text-gray-600 font-medium">{t("stats.cost_reduction")}</div>
                 <div className="mt-4 text-sm text-gray-500">{t("stats.cost_comparison")}</div>
               </div>
             </div>
             
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+              <div className="absolute inset-0 bg-linear-to-r from-purple-600 to-pink-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
               <div className="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <div className="text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">{t("stats.deployment_period")}</div>
+                <div className="text-5xl font-bold bg-linear-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2">{t("stats.deployment_period")}</div>
                 <div className="text-gray-600 font-medium">{t("stats.deployment_time")}</div>
                 <div className="mt-4 text-sm text-gray-500">{t("stats.deployment_desc")}</div>
               </div>
             </div>
             
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+              <div className="absolute inset-0 bg-linear-to-r from-emerald-600 to-teal-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
               <div className="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <div className="text-5xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">24/7</div>
+                <div className="text-5xl font-bold bg-linear-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent mb-2">24/7</div>
                 <div className="text-gray-600 font-medium">{t("stats.support")}</div>
                 <div className="mt-4 text-sm text-gray-500">{t("stats.support_desc")}</div>
               </div>

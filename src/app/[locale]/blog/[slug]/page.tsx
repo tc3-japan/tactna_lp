@@ -10,13 +10,11 @@ import { getBlogId } from "@/lib/microcms/types";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 import { stripHtmlTags, truncateDescription } from "@/lib/utils/seo";
+import { routing } from "@/i18n/routing";
 
-interface BlogDetailPageProps {
-  params: Promise<{
-    locale: "ja" | "en";
-    slug: string;
-  }>;
-}
+type BlogDetailPageProps = {
+  params: Promise<{ locale?: "ja" | "en"; slug: string }>;
+};
 
 export async function generateStaticParams() {
   const slugs = await getAllBlogSlugs();
@@ -30,7 +28,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: BlogDetailPageProps): Promise<Metadata> {
-  const { slug, locale } = await params;
+  const p = await params;
+  const locale = p?.locale ?? routing.defaultLocale;
+  const slug = p?.slug as string;
   const blog = await getBlogBySlug(slug);
 
   if (!blog) {
@@ -88,7 +88,9 @@ export async function generateMetadata({
 }
 
 export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
-  const { locale, slug } = await params;
+  const p = await params;
+  const locale = p?.locale ?? routing.defaultLocale;
+  const slug = p?.slug as string;
   const blog = await getBlogBySlug(slug);
 
   if (!blog) {

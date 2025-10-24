@@ -10,7 +10,7 @@ export default function Features() {
   return (
     <section className="py-20 bg-gray-50" id="features">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-600 mb-16">
+        <h2 className="text-3xl md:text-5xl font-extrabold text-center bg-clip-text text-transparent bg-linear-to-r from-blue-500 to-indigo-600 mb-16">
           {t("title")}
         </h2>
         <div className="space-y-10">

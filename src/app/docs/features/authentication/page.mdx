@@ -1,0 +1,55 @@
+# Authentication
+
+Tactna allows authentication processing to be delegated to your chosen Identity Provider (IdP).
+Supported IdPs: **Auth0**, **Amazon Cognito**.
+
+The available features vary depending on the IdP.
+When using **Auth0**, you can leverage the **Universal Login page**, meaning most of authentication features provided by Auth0 are available out of the box.
+When using **Cognito**, Tactna provides its own **Managed Login page**. Cognito hosted UI are not available due to architectural constraints required to support Tactna's advanced data model. These constraints are not limitations, but design trade-offs to *enhance* Cognito's value within Tactna.
+
+Some features may not well supported. Please contact technical support for those issues.
+
+---
+
+## Sign-in Methods
+
+* **Auth0:** All Auth0 authentication methods are generally supported.
+* **Cognito:** Supports email and password authentication.
+
+For example: Email & Password / Magic Link / OTP / Passwordless / WebAuthn / Passkey
+
+
+## Social & Enterprise Login
+
+* **Auth0:** All Auth0-supported methods are generally available.
+* **Cognito:** Supports **SAML** and **OIDC Federation**.
+* Self-management screen for Enterprise Federation is available.
+
+
+## Adaptive Authentication
+
+* Both **Auth0** and **Cognito** adaptive authentication features are generally available.
+
+For example: Risk-based access control, IP/device/location detection.
+
+
+## API-based Authentication
+
+* **Auth0:** Generally compatible with API-based flows.
+* **Cognito:** Supports **Client Credentials Flow (M2M)**.
+
+For example: CIBA / Device Flow / DPoP
+
+
+## Session & Token Management
+
+* **Auth0:** All Auth0 token management features are generally supported.
+* **Cognito:** Supports **JWT**, **Refresh Token**, **Single Sign-on(SSO)**, and **Single Logout(SLO)**.
+
+For example: JWT / Refresh Token / Token Rotation / Logout / Session Revocation
+
+
+## Custom Auth Flows
+
+* **Auth0:** All Auth0 Triggers and Actions are generally available.
+* **Cognito:** Currently not supported.

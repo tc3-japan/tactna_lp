@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
+import NextLink from "next/link";
 import { useTranslations } from "next-intl";
 
 export default function Navbar() {
@@ -26,18 +27,18 @@ export default function Navbar() {
 
             <div className="ml-10 flex items-center space-x-4">
               <div className="hidden md:block">
-                <a
+                <NextLink
                   href="/products"
                   className="text-gray-700 hover:text-blue-600 px-3 py-2"
                 >
                   {t("products")}
-                </a>
-                <a
+                </NextLink>
+                <NextLink
                   href="/solutions"
                   className="text-gray-700 hover:text-blue-600 px-3 py-2"
                 >
                   {t("solutions")}
-                </a>
+                </NextLink>
                 <Link
                   href="/#features"
                   className="text-gray-700 hover:text-blue-600 px-3 py-2"

@@ -1,4 +1,4 @@
 export default {
-  "index": "Products",
-  "features": "Features",
+  index: "Products",
+  features: "Features",
 }

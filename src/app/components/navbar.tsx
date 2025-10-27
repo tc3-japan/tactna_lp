@@ -26,6 +26,18 @@ export default function Navbar() {
 
             <div className="ml-10 flex items-center space-x-4">
               <div className="hidden md:block">
+                <a
+                  href="/products"
+                  className="text-gray-700 hover:text-blue-600 px-3 py-2"
+                >
+                  {t("products")}
+                </a>
+                <a
+                  href="/solutions"
+                  className="text-gray-700 hover:text-blue-600 px-3 py-2"
+                >
+                  {t("solutions")}
+                </a>
                 <Link
                   href="/#features"
                   className="text-gray-700 hover:text-blue-600 px-3 py-2"

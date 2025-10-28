@@ -1,10 +1,12 @@
 import Hero from "../components/hero";
 import InfoCard from "../components/InfoCard";
+import InfoArchitecture from "../components/InfoArchitecture";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import HubSpotForm from "../components/inquiry_form";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
+import FeatureList from "../components/FeatureList";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -23,6 +25,8 @@ export default async function Home({
       <Navbar />
       <Hero />
       <InfoCard />
+      <InfoArchitecture />
+      <FeatureList />
       <HubSpotForm />
       <Footer />
     </>

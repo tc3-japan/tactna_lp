@@ -1,12 +1,11 @@
 {
   "navbar": {
-    "features": "Features",
-    "compare": "Compare",
     "blog": "Blog",
     "products": "Products",
     "solutions": "Solutions",
-    "download_material": "Download Material",
-    "contact": "Contact sales"
+    "resources": "Resources",
+    "contact": "Contact sales",
+    "customers": "Customers"
   },
   "hero": {
     "title": "You Build Apps.<br></br>We Handle User Management.",

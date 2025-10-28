@@ -39,17 +39,19 @@ export default function Navbar() {
                 >
                   {t("solutions")}
                 </NextLink>
-                <Link
-                  href="/#features"
+                <a
+                  href="https://info.tc3.co.jp/hubfs/Tactna/tactna_a4_DL%E7%94%A8.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-700 hover:text-blue-600 px-3 py-2"
                 >
-                  {t("features")}
-                </Link>
+                  {t("resources")}
+                </a>
                 <Link
-                  href="/#feature-comparison"
+                  href="/customers"
                   className="text-gray-700 hover:text-blue-600 px-3 py-2"
                 >
-                  {t("compare")}
+                  {t("customers")}
                 </Link>
                 <Link
                   href="/blog"
@@ -57,19 +59,11 @@ export default function Navbar() {
                 >
                   {t("blog")}
                 </Link>
-                <a
-                  href="https://info.tc3.co.jp/hubfs/Tactna/tactna_a4_DL%E7%94%A8.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2"
-                >
-                  {t("download_material")}
-                </a>
               </div>
-              <Button className="bg-blue-600">
-                <Link href="/#inquiry">{t("contact")}</Link>
-              </Button>
             </div>
+            <Button className="bg-blue-600">
+              <Link href="/#inquiry">{t("contact")}</Link>
+            </Button>
           </div>
         </div>
       </nav>

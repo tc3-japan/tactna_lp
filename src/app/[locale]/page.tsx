@@ -1,4 +1,5 @@
 import Hero from "../components/hero";
+import InfoCard from "../components/InfoCard";
 import Navbar from "../components/navbar";
 //import FeatureCarousel from "../components/carousel";
 import ImageWithBorderAndDelete from "../components/banner";
@@ -27,6 +28,7 @@ export default async function Home({
     <>
       <Navbar />
       <Hero />
+      <InfoCard />
       <CaseSection />
       <VideoPlayer />
       <FeaturesEnhanced />

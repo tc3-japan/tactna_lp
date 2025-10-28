@@ -9,15 +9,13 @@
     "contact": "お問い合わせ"
   },
   "hero": {
-    "catchcopy": "Unleash your potential with Tactna",
-    "title1": "認証認可・ID管理は",
-    "title2": "ぜんぶ Tactna にお任せ！",
+    "title": "認証認可・ID管理は<br />ぜんぶ Tactna にお任せ！",
     "desc": "Tactna一つでサービス展開に必要なものすべてをカバー",
-    "feature1": "認証認可機能",
-    "feature2": "IDに紐づく様々なデータ利活用",
-    "feature3": "マイページ、業務管理ページ",
-    "feature4": "様々な業務フローに合わせたカスタマイズ​",
     "customers": "TC3のお客様"
+  },
+  "infoCard": {
+    "title": "Tactnaでビジネスを変革",
+    "description": "包括的なID管理プラットフォームがどのように企業の業務効率化、セキュリティ強化、デジタルトランスフォーメーションの加速を実現し、ユーザーIDとアクセス権限の完全な制御を維持するかをご紹介します。"
   },
   "video": {
     "title": "Tactnaデモ動画"

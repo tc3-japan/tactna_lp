@@ -6,18 +6,20 @@
     "products": "Products",
     "solutions": "Solutions",
     "download_material": "Download Material",
-    "contact": "Contact us"
+    "contact": "Contact sales"
   },
   "hero": {
-    "catchcopy": "Unleash your potential with Tactna",
-    "title1": "Deploy Your Services",
-    "title2": "Instantly with Tactna",
-    "desc": "Tactna covers everything you need to launch your service",
+    "title": "You Build Apps.<br></br>We Handle User Management.",
+    "desc": "Enable self-service user management across complex<br></br>organizational hierarchies while you build what matters most.",
     "feature1": "Authentication & Authorization",
     "feature2": "Utilize various data linked to IDs",
     "feature3": "My Page, Admin Dashboard",
     "feature4": "Customizable for various business workflows",
     "customers": "Our Clients"
+  },
+  "infoCard": {
+    "title": "Enterprise growth<br></br>creates enterprise complexity.",
+    "description": "As you launch more applications, you create more silos. <br></br>The result? A fragmented user experience for your customers and a complex, <br></br>costly operational nightmare for your teams."
   },
   "video": {
     "title": "Demo Video"

@@ -61,7 +61,7 @@ export default function Navbar() {
                 </Link>
               </div>
             </div>
-            <Button className="bg-blue-600">
+            <Button className="bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
               <Link href="/#inquiry">{t("contact")}</Link>
             </Button>
           </div>

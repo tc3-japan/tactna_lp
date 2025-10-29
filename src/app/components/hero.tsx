@@ -1,18 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
   const t = useTranslations("hero");
   const tNav = useTranslations("navbar");
-  const locale = useLocale();
 
   return (
     <div className="overflow-x-hidden pt-20 md:pt-16">
       <div className="flex items-center justify-center py-20">
         <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center">
           {/* タイトル */}
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl">
+          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold">
             {t.rich("title", {
               br: () => <br />,
             })}
@@ -28,7 +27,7 @@ export default function Hero() {
           {/* Contact Salesボタン */}
           <div className="mt-8">
             <Link
-              href={`/${locale}/contact`}
+              href="#inquiry"
               className="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 transition-colors duration-200"
             >
               {tNav("contact")}

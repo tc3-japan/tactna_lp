@@ -57,7 +57,6 @@ export default function FeatureList() {
             description={feature.description}
             className={index === 0 ? "pt-0" : ""}
             containerClassName="max-w-6xl"
-            sectionLabelClassName="text-blue-600"
             titleClassName="text-gray-900"
             descriptionClassName="text-gray-600"
           />

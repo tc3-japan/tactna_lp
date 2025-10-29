@@ -89,10 +89,11 @@ export default function ImageTextSection({
             {sectionLabel && (
               <div
                 className={cn(
-                  "text-sm font-semibold text-blue-600 uppercase tracking-wider mb-2",
+                  "text-lg font-bold tracking-wider mb-2 flex items-center",
                   sectionLabelClassName
                 )}
               >
+                <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 shrink-0" />
                 {sectionLabel}
               </div>
             )}

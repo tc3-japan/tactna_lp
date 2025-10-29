@@ -24,6 +24,10 @@
     "title": "The Enterprise User Management Layer<br></br>That Works With Your Stack.",
     "description": "Tactna sits between your applications and your chosen IDaaS provider, delivering enterprise-grade self-service capabilities without replacing your security foundation. Scale complex organizational structures while maintaining the security standards your enterprise demands."
   },
+  "infoImpact": {
+    "title": "The Impact You Can Expect",
+    "description": "Our customers are planning their Tactna implementations with these targets in mind. <br></br>See what's possible when you eliminate user management complexity."
+  },
   "video": {
     "title": "Demo Video"
   },

@@ -7,6 +7,7 @@ import HubSpotForm from "../components/inquiry_form";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import FeatureList from "../components/FeatureList";
+import InfoImpact from "../components/InfoImpact";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -27,6 +28,7 @@ export default async function Home({
       <InfoCard />
       <InfoArchitecture />
       <FeatureList />
+      <InfoImpact />
       <HubSpotForm />
       <Footer />
     </>

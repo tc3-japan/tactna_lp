@@ -1,1 +1,29 @@
 # B2C
+
+For customer-facing applications, UX and self-service functionality are critical.
+From a UX perspective, we require frictionless sign-up, login, and password reset processes. Additionally, we must carefully design the user migration flow when implementing unified identity solutions.
+From a self-service perspective, users should be able to manage their own accounts independently, and application activation on the authentication platform should be achievable without requiring support inquiries.
+
+<img
+  src="/docs/solutions/b2c/self_service_and_ux.png"
+  alt="B2C Self-Service and UX Architecture"
+  className="w-full 2xl:w-4/5 mx-auto"
+/>
+
+### 1. Frictionless Sign-up
+
+To prevent user drop-off during the sign-up process—including terms of service acceptance, email verification, and minimal profile information entry—we need a unified standard sign-up flow across our authentication platform.
+Alternatively, custom flow implementations can be achieved through API integration.
+
+### 2. Self-Service Account Management
+
+With customer applications typically handling large user bases, the ideal scenario is allowing users to handle all necessary operations themselves.
+By utilizing the standard-provided portal, users can perform self-service operations for profile information and application usage management, significantly reducing operational workload.
+Even for applications with specific custom requirements, flexible solutions can be achieved through custom feature implementations.
+
+### 3. User Migration Flow
+
+When migrating users from existing databases to our authentication platform, a smooth migration process is essential to minimize user burden and prevent application dropout.
+By combining batch and JIT migration methods, we can complete the transition with minimal or zero downtime.
+
+* When using Auth0 as an Identity Provider, password hashes from existing databases can also be imported during the migration process.

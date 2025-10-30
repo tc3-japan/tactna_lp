@@ -1,1 +1,20 @@
 # ID Integration
+
+In larger organizations, different departments often use separate IdPs for customer-facing services, meaning users accessing multiple departmental applications must maintain separate accounts with each IdP.
+This situation makes implementing consistent security controls across the organization difficult, while also creating UX challenges as users must manage multiple credentials.
+To address this, implementing a primary IdP that centrally manages authentication can significantly improve both security and UX.
+
+<img
+  src="/docs/solutions/id_integration/hub_spoke.png"
+  alt="ID Integration Hub and Spoke Architecture"
+  className="w-full 2xl:w-4/5 mx-auto"
+/>
+
+### 1. Unified Security Standards Through ID Consolidation
+Centralizing IDs and passwords in the primary IdP enables consistent authentication management across the organization, reducing the risk of security incidents.
+
+### 2. Enhanced UX Through Single-Sign-On
+Users can access all applications with a single ID and password, facilitating the use of similar services and creating opportunities for service synergies.
+
+### 3. Maintaining Departmental Autonomy
+When users log in, the department-managed IDaaS serves as the front-end, allowing flexible handling of detailed authorization processes and unique controls as needed. This approach balances centralized management with necessary operational flexibility.

@@ -22,7 +22,6 @@ export function BlogCard({ blog, className }: BlogCardProps) {
       day: "numeric",
     }
   );
-  console.log(blog);
 
   return (
     <article

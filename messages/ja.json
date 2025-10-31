@@ -1,229 +1,186 @@
 {
   "navbar": {
-    "features": "機能",
-    "compare": "比較",
-    "blog": "ブログ",
-    "products": "プロダクト",
-    "solutions": "ソリューション",
-    "download_material": "資料ダウンロード",
-    "contact": "お問い合わせ",
-    "resources": "リソース",
+    "blog": "Blog",
+    "products": "Products",
+    "solutions": "Solutions",
+    "resources": "Resources",
+    "contact": "Contact sales",
+    "customers": "Customers",
     "resources_dropdown": {
-      "documentation": "ドキュメント",
-      "whitepaper": "ホワイトペーパー",
-      "case_studies": "導入事例",
-      "download_materials": "資料ダウンロード",
-      "webinar": "ウェビナー",
-      "api_reference": "APIリファレンス"
+      "documentation": "Documentation",
+      "blog": "Blog",
+      "case_studies": "Case Studies",
+      "download_materials": "Download Materials",
+      "webinar": "Webinars",
+      "api_reference": "API Reference"
     }
   },
   "hero": {
-    "title": "認証認可・ID管理は<br />ぜんぶ Tactna にお任せ！",
-    "desc": "Tactna一つでサービス展開に必要なものすべてをカバー",
-    "customers": "TC3のお客様"
+    "title": "You Build Apps.<br></br>We Handle User Management.",
+    "desc": "Enable self-service user management across complex<br></br>organizational hierarchies while you build what matters most.",
+    "feature1": "Authentication & Authorization",
+    "feature2": "Utilize various data linked to IDs",
+    "feature3": "My Page, Admin Dashboard",
+    "feature4": "Customizable for various business workflows",
+    "customers": "Our Clients"
   },
   "infoCard": {
-    "title": "Tactnaでビジネスを変革",
-    "description": "包括的なID管理プラットフォームがどのように企業の業務効率化、セキュリティ強化、デジタルトランスフォーメーションの加速を実現し、ユーザーIDとアクセス権限の完全な制御を維持するかをご紹介します。"
+    "title": "Enterprise Growth<br></br>Creates Enterprise Complexity.",
+    "description": "As you launch more applications, you create more silos. <br></br>The result? A fragmented user experience for your customers and a complex, <br></br>costly operational nightmare for your teams."
+  },
+  "infoArchitecture": {
+    "title": "The Enterprise User Management Layer<br></br>That Works With Your Stack.",
+    "description": "Tactna sits between your applications and your chosen IDaaS provider, delivering enterprise-grade self-service capabilities without replacing your security foundation. Scale complex organizational structures while maintaining the security standards your enterprise demands."
+  },
+  "infoImpact": {
+    "title": "The Impact You Can Expect",
+    "description": "Our customers are planning their Tactna implementations with these targets in mind. <br></br>See what's possible when you eliminate user management complexity."
   },
   "video": {
-    "title": "Tactnaデモ動画"
-  },
-  "features": {
-    "title": "Tactnaの特徴",
-    "subtitle": "エンタープライズレベルのID管理基盤を、開発工数を大幅に削減しながら実現",
-    "cards": {
-      "1": {
-        "title": "ID・アカウント管理の\nベストプラクティスを集結",
-        "desc": "Tactnaは、ID・アカウント管理のベストプラクティスを集結した基盤です。フルスクラッチの場合と比較し、特に初期構築費を大幅に圧縮することができ、5年トータルで36％の圧縮が可能なサービスです。"
-      },
-      "2": {
-        "title": "業界標準の​​ユーザー管理・\nセキュリティ",
-        "desc": "業界標準の認証機能を内包しセキュリティレベルの高い設計を標準で実装。TC3のベストプラクティスを付随することで、複数サービスの共通認証基盤の実装をスピーディに実現。また、フルマネージド・サービスのため、運用の手間も煩わせません。"
-      },
-      "3": {
-        "title": "B2Bビジネス対応",
-        "desc": "B2Bサービスでは、単純に1ユーザーをサービスにログインさせるだけではなく、アプリケーションの利用権限や契約プランなど複数のことを考慮しなければ、サービスとして成り立ちません。Tactnaはデフォルトでこれらの実装ができているため、複雑な要件定義や設計は一切不要です。"
-      },
-      "4": {
-        "title": "様々なサービス形態・業務に対応できる柔軟性",
-        "desc": "ビジネス展開の際には、課金のための決済サービスから、社内の契約管理システム、会計システムなどの基幹システムとの連携を行い、ビジネスが滞りなく運用できることが求められます。提供事業者毎に異なる仕様に関しても、Tactnaが柔軟に対応できます。"
-      },
-      "5": {
-        "title": "業務効率化",
-        "desc": "開発の2割のコストがかかるとされるポータル機能を実装し、本番稼働後に​​ID関連業務にエンジニアの手を煩わせません。"
-      },
-      "6": {
-        "title": "顧客IDを中核としたデータ利活用の基盤",
-        "desc": "アクティブユーザー数、企業毎のプロファイルを分析する基盤としてTactnaは機能します。ユーザーの状況を一元的に確認することができるため、様々な施策のベースとなります。"
-      }
-    },
-    "readmore": "もっと見る",
-    "stats": {
-      "cost_reduction": "5年間のトータルコスト削減",
-      "cost_comparison": "フルスクラッチ開発と比較",
-      "deployment_time": "最短導入期間",
-      "deployment_period": "2週間",
-      "deployment_desc": "PoCから本番稼働まで",
-      "support": "エンタープライズサポート",
-      "support_desc": "専門チームが常時対応"
-    }
+    "title": "Demo Video"
   },
   "compare": {
-    "title": "開発者を認証認可・ID管理関連業務から解放",
-    "auth_id": "認証認可",
-    "unit_user": "ユーザー単位",
-    "unit_organization": "組織単位",
-    "multi_service": "複数サービス対応",
-    "portal_ui": "ポータル画面",
-    "ui_toc": "toCユーザ向けUI",
-    "ui_tob": "toBユーザ向けUI",
-    "ui_custom": "独自コンポーネント",
-    "customizing": "拡張機能",
-    "billing": "課金管理",
-    "contract": "契約・サービス管理",
-    "system_integration": "システム連携",
-    "feature": "機能概要",
-    "scratch": "スクラッチ開発"
+    "title": "Liberate Developers from ID Management",
+    "auth_id": "Authentication and Authorization",
+    "unit_user": "Per User",
+    "unit_organization": "Per Organization",
+    "multi_service": "Multiple Services Support",
+    "portal_ui": "Portal Interface",
+    "ui_toc": "UI for ToC Users",
+    "ui_tob": "UI for ToB Users",
+    "ui_custom": "Custom Components",
+    "customizing": "Extended Features",
+    "billing": "Billing Management",
+    "contract": "Contract and Service Management",
+    "system_integration": "System Integration",
+    "feature": "Feature",
+    "scratch": "Scratch Dev."
   },
   "company": {
-    "name": "TC3 株式会社",
-    "address1": "〒100-0004 東京都千代田区大手町一丁目6番1号",
-    "address2": "大手町ビル4階 FINOLAB"
+    "name": "TC3 K.K.",
+    "address1": "Otemachi Building 4F FINOLAB",
+    "address2": "Otemachi 1-6-1, Chiyoda-ku, Tokyo, Japan"
   },
   "metadata": {
-    "title": "Tactna | 認証認可・ID管理基盤",
-    "description": "Tactnaは、TC3株式会社が提供する認証認可・ID管理のためのSaaSです。"
+    "title": "Tactna | Account & User Management Platform",
+    "description": "Tactna is a platform that provides account management, authentication and authorization services, enabling rapid deployment of your services."
   },
   "compare_detail": {
-    "subtitle": "Tactnaなら、開発工数を大幅に削減しながら高機能なID管理基盤を実現",
-    "recommended": "おすすめ",
-    "coverage_rate": "機能カバー率",
-    "features_implemented": "機能実装済み",
-    "general_idaas": "一般的なIDaaS",
-    "scratch_dev_full": "フルスクラッチ開発",
-    "dev_effort": "開発工数",
-    "massive": "膨大",
-    "high_cost": "高コスト",
-    "dev_operation_load": "開発・運用負荷",
-    "feature_detail_comparison": "機能詳細比較",
-    "standard_feature": "標準機能として提供",
-    "dev_implementation_required": "開発・実装が必要",
-    "not_supported": "非対応",
-    "all_features_standard": "すべての機能が標準搭載",
-    "reduce_dev_effort_enterprise": "開発工数を削減しながら、エンタープライズレベルのID管理基盤を実現します。",
-    "learn_more": "詳しく見る",
+    "subtitle": "With Tactna, achieve a high-performance ID management platform while significantly reducing development effort",
+    "recommended": "Recommended",
+    "coverage_rate": "Feature Coverage",
+    "features_implemented": "Features Implemented",
+    "general_idaas": "General IDaaS",
+    "scratch_dev_full": "Full Scratch Development",
+    "dev_effort": "Development Effort",
+    "massive": "Massive",
+    "high_cost": "High Cost",
+    "dev_operation_load": "Dev & Operation Load",
+    "feature_detail_comparison": "Detailed Feature Comparison",
+    "standard_feature": "Provided as standard feature",
+    "dev_implementation_required": "Development required",
+    "not_supported": "Not supported",
+    "all_features_standard": "All features included as standard",
+    "reduce_dev_effort_enterprise": "Achieve enterprise-level ID management infrastructure while reducing development effort.",
+    "learn_more": "Learn More",
     "tactna_benefits": {
-      "all_features": "すべての機能を標準搭載",
-      "reduce_initial_cost": "初期費用を大幅削減",
-      "five_year_cost_reduction": "5年間で36%のコスト削減"
+      "all_features": "All features included",
+      "reduce_initial_cost": "Significantly reduce initial costs",
+      "five_year_cost_reduction": "36% cost reduction over 5 years"
     },
     "idaas_limitations": {
-      "basic_auth_only": "基本的な認証機能のみ",
-      "limited_b2b": "B2B対応は限定的",
-      "low_customization": "カスタマイズ性が低い"
+      "basic_auth_only": "Basic authentication only",
+      "limited_b2b": "Limited B2B support",
+      "low_customization": "Low customization flexibility"
     },
     "scratch_challenges": {
-      "all_in_house": "すべて自社開発が必要",
-      "high_security_risk": "セキュリティリスクが高い",
-      "continuous_operation_cost": "運用・保守コストが継続"
+      "all_in_house": "All in-house development required",
+      "high_security_risk": "High security risk",
+      "continuous_operation_cost": "Continuous operation & maintenance costs"
     },
-    "readmore": "もっと見る"
+    "readmore": "Read More"
   },
   "features_readmore": "Read More",
   "case": {
-    "title": "関連事例",
-    "details": "詳細を見る",
+    "title": "Related Cases",
+    "details": "View Details",
     "msad": {
-      "company": "MS&ADインターリスク総研株式会社",
-      "quote": "今回の共通認証基盤プロジェクトは当社がデジタルサービスを複数展開するうえで非常に重要な機能です。様々なサービスが考えられるなかで、網羅的にカバーできる内容として実装ができたことを嬉しく思います。TC3さんとはPoC、要件定義から膝詰めでのディスカッションを通してしっかりとした共通認証基盤を実装することができました。",
-      "department": "デジタルイノベーション本部 DI推進部",
-      "person": "芝田 達郎 様"
+      "company": "MS&AD InterRisk Research & Consulting, Inc.",
+      "quote": "This common authentication infrastructure project is a crucial feature for our company to deploy multiple digital services. I am pleased that we were able to implement comprehensive coverage among various possible services. Through PoC and requirements definition discussions with TC3, we were able to implement a solid common authentication infrastructure.",
+      "department": "Digital Innovation Division, DI Promotion Department",
+      "person": "Mr. Tatsuro Shibata"
     },
     "gsearch": {
-      "company": "株式会社ジー・サーチ",
-      "quote": "Tactna Identity Platformを採用することで、最終的に実現したい「データ利活用」に向けた基盤を整えることができました。今後はすべてのサービスをTactna上に乗せることを計画しており、認証認可はもちろん、組織の概念の実装など、本来はアプリケーション毎に検討するアイデンティティ領域の検討・実装コストが個別に不要となることで、アプリケーション開発に集中できることを期待しています。また、Tactnaの今後のパワフルなアップデートに期待したいと考えています。",
-      "department": "デジタルソリューショングループ グループ長",
-      "person": "稲垣 明 様"
-    },
-    "dummy": {
-      "company": "テクノロジー株式会社",
-      "quote": "Tactnaの導入により、認証基盤の開発期間を大幅に短縮できました。特にB2B向けの組織管理機能が標準で実装されていたことで、複雑な権限管理やマルチテナント対応をスムーズに実現できました。セキュリティ面でも業界標準に準拠しており、安心して運用できています。今後のアップデートにも大いに期待しています。",
-      "department": "技術統括本部",
-      "person": "田中 太郎 様"
+      "company": "G-Search Limited",
+      "quote": "By adopting the Tactna Identity Platform, we were able to establish the foundation for the 'data utilization' we ultimately want to achieve. We plan to migrate all services onto Tactna in the future. By eliminating the individual costs of considering and implementing identity domains that would normally be considered for each application, including authentication/authorization and organizational concepts, we expect to be able to focus on application development. We also look forward to powerful updates to Tactna in the future.",
+      "department": "Group Manager, Digital Solutions Group",
+      "person": "Mr. Akira Inagaki"
     }
   },
   "testimonial": {
-    "previous": "前へ",
-    "next": "次へ",
-    "slideAnnouncement": "スライド {current} / {total}"
+    "previous": "Previous",
+    "next": "Next",
+    "slideAnnouncement": "Slide {current} of {total}"
   },
   "banner": {
-    "close": "閉じる"
+    "close": "Close"
   },
   "download": {
-    "button": "資料をダウンロード"
+    "button": "Download Materials"
   },
   "structured_data": {
-    "company_name": "TC3 株式会社",
-    "address_street": "大手町一丁目6番1号 大手町ビル4階 FINOLAB",
-    "address_locality": "千代田区",
-    "address_region": "東京都",
-    "website_description": "Tactnaは、TC3株式会社が提供する認証認可・ID管理のためのSaaSです。",
-    "product_description": "認証認可・ID管理のためのSaaS基盤"
+    "company_name": "TC3 K.K.",
+    "address_street": "Otemachi Building 4F FINOLAB, Otemachi 1-6-1",
+    "address_locality": "Chiyoda-ku",
+    "address_region": "Tokyo",
+    "website_description": "Tactna is a platform that provides account management, authentication and authorization services, enabling rapid deployment of your services.",
+    "product_description": "Account & User Management Platform"
   },
   "blog": {
-    "title": "ブログ",
-    "description": "Tactnaの最新情報、技術記事、お知らせなどをお届けします",
-    "readMore": "続きを読む",
-    "relatedPosts": "関連記事",
-    "publishedDate": "公開日",
-    "previous": "前へ",
-    "next": "次へ",
-    "tableOfContents": "目次"
+    "title": "Blog",
+    "description": "Stay updated with the latest news, technical articles, and announcements from Tactna",
+    "readMore": "Read More",
+    "relatedPosts": "Related Posts",
+    "publishedDate": "Published",
+    "previous": "Previous",
+    "next": "Next",
+    "tableOfContents": "Table of Contents"
   },
   "featureList": {
-    "mainTitle": "ビジネスを変革する強力な機能",
-    "mainDescription": "包括的な機能セットが、あなたのビジネスオペレーションを変革し、成長を促進します。",
-    "automation": {
-      "label": "自動化",
-      "title": "スマートなワークフロー自動化",
-      "description": "インテリジェントな自動化でビジネスプロセスを効率化。手作業を削減し、エラーを最小化。チームが戦略的なイニシアティブに集中できる環境を整えます。"
+    "1": {
+      "label": "Selectable IDaaS Integration",
+      "title": "Keep Your Security Stack. Add Enterprise Capabilities.",
+      "description": "Choose your favorite IDaaS provider like Auth0, Cognito for your security layer. Tactna adds the enterprise management capabilities they don't provide."
     },
-    "analytics": {
-      "label": "分析",
-      "title": "高度なデータ分析",
-      "description": "強力な分析ツールでビジネスの深い洞察を獲得。リアルタイムダッシュボード、カスタムレポート、予測分析機能でデータドリブンな意思決定を実現します。"
+    "2": {
+      "label": "Self-Service Portals",
+      "title": "Empower Your Customers to Help Themselves.",
+      "description": "Provide branded portals for customers to manage their organization, invite team members, and handle cross functions like billing within the organization. Reduce your administrative overhead dramatically."
     },
-    "collaboration": {
-      "label": "コラボレーション",
-      "title": "シームレスなチーム連携",
-      "description": "統合されたコラボレーションツールでサイロを打破し、チームワークを強化。ファイル共有、リアルタイムコミュニケーション、効率的なプロジェクト管理を全社規模で実現。"
+    "3": {
+      "label": "Enhanced Security & Compliance",
+      "title": "Multi-Tier Organizations. Zero Security Gaps.",
+      "description": "Enable partners and resellers to self-manage their teams while maintaining security. Automated user lifecycle management ensures departing users are removed instantly across all systems."
     },
-    "security": {
-      "label": "セキュリティ",
-      "title": "エンタープライズグレードセキュリティ",
-      "description": "業界最高水準のセキュリティ機能でビジネスを保護。多要素認証、エンドツーエンド暗号化、グローバル標準への準拠でデータを安全に保ちます。"
-    },
-    "cta": {
-      "title": "ビジネス変革の準備はできていますか？",
-      "description": "すでに数千社が当社のプラットフォームを利用して目標を達成しています。",
-      "buttonText": "今すぐ始める"
+    "4": {
+      "label": "Enterprise-Ready Customization",
+      "title": "Built for Enterprise Requirements",
+      "description": "Full UI customization, custom properties, workflow hooks, and Core System integration. Every deployment can match your exact enterprise needs and branding."
     }
   },
   "tc3banner": {
-    "title": "認証認可・ID管理の新しい標準",
-    "description": "Tactnaでビジネスを加速させる",
-    "cta": "デモをリクエスト"
+    "title": "Enterprise user management. Enterprise results.",
+    "description": "See why global enterprises choose Tactna to scale their user management without replacing their security stack.",
+    "cta": "Request a Demo"
   },
   "footer": {
-    "product": "プロダクト",
-    "solutions": "ソリューション",
-    "resources": "資料ダウンロード",
-    "customers": "導入事例",
-    "aboutUs": "TC3について",
-    "privacyPolicy": "プライバシーポリシー",
-    "termsOfService": "利用規約",
+    "product": "Product",
+    "solutions": "Solutions",
+    "resources": "Resources",
+    "customers": "Customers",
+    "aboutUs": "About Us",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
     "copyright": "© 2025 TC3. All rights reserved."
   }
 }

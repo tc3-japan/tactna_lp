@@ -5,7 +5,15 @@
     "solutions": "Solutions",
     "resources": "Resources",
     "contact": "Contact sales",
-    "customers": "Customers"
+    "customers": "Customers",
+    "resources_dropdown": {
+      "documentation": "Documentation",
+      "blog": "Blog",
+      "case_studies": "Case Studies",
+      "download_materials": "Download Materials",
+      "webinar": "Webinars",
+      "api_reference": "API Reference"
+    }
   },
   "hero": {
     "title": "You Build Apps.<br></br>We Handle User Management.",

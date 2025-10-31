@@ -6,7 +6,16 @@
     "products": "プロダクト",
     "solutions": "ソリューション",
     "download_material": "資料ダウンロード",
-    "contact": "お問い合わせ"
+    "contact": "お問い合わせ",
+    "resources": "リソース",
+    "resources_dropdown": {
+      "documentation": "ドキュメント",
+      "whitepaper": "ホワイトペーパー",
+      "case_studies": "導入事例",
+      "download_materials": "資料ダウンロード",
+      "webinar": "ウェビナー",
+      "api_reference": "APIリファレンス"
+    }
   },
   "hero": {
     "title": "認証認可・ID管理は<br />ぜんぶ Tactna にお任せ！",

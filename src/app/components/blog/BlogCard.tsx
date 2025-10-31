@@ -37,7 +37,7 @@ export function BlogCard({ blog, className }: BlogCardProps) {
               src={blog.thumbnail.url}
               alt={blog.title}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
+              className="object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-90"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           ) : (
@@ -62,7 +62,6 @@ export function BlogCard({ blog, className }: BlogCardProps) {
               </div>
             </div>
           )}
-          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300" />
         </div>
         <div className="p-6 space-y-3">
           <time className="inline-block px-3 py-1 text-xs font-medium text-blue-600 bg-blue-50 rounded-full">

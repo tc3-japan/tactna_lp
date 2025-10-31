@@ -159,5 +159,10 @@
       "title": "Built for Enterprise Requirements",
       "description": "Full UI customization, custom properties, workflow hooks, and Core System integration. Every deployment can match your exact enterprise needs and branding."
     }
+  },
+  "tc3banner": {
+    "title": "Enterprise user management. Enterprise results.",
+    "description": "See why global enterprises choose Tactna to scale their user management without replacing their security stack.",
+    "cta": "Request a Demo"
   }
 }

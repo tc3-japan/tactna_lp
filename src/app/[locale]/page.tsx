@@ -9,6 +9,7 @@ import { setRequestLocale } from "next-intl/server";
 import FeatureList from "../components/FeatureList";
 import InfoImpact from "../components/InfoImpact";
 import CaseCarousel from "../components/caseCarousel";
+import TC3Banner from "../components/tc3banner";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -32,6 +33,7 @@ export default async function Home({
       <InfoImpact />
       <CaseCarousel />
       <HubSpotForm />
+      <TC3Banner />
       <Footer />
     </>
   );

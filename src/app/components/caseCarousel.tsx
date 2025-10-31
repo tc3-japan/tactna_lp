@@ -13,17 +13,17 @@ export function CaseCarousel() {
   const t = useTranslations("case");
 
   // 画像スロット - MS&AD
-  const MSADImageSlot = (
-    <div className="relative w-full h-full rounded-lg overflow-hidden">
-      <Image
-        src="/client_logos/msad.png"
-        alt="G-Search Data Utilization Platform"
-        width={800}
-        height={500}
-        className="w-full h-full object-contain"
-      />
-    </div>
-  );
+  // const MSADImageSlot = (
+  //   <div className="relative w-full h-full rounded-lg overflow-hidden">
+  //     <Image
+  //       src="/client_logos/msad.png"
+  //       alt="G-Search Data Utilization Platform"
+  //       width={800}
+  //       height={500}
+  //       className="w-full h-full object-contain"
+  //     />
+  //   </div>
+  // );
 
   // 画像スロット - G-Search（実際の画像を使用）
   const GSearchImageSlot = (
@@ -47,15 +47,6 @@ export function CaseCarousel() {
         org: t("gsearch.company"),
       },
       imageSlot: GSearchImageSlot,
-    },
-    {
-      quoteKey: "case.msad.quote",
-      author: {
-        name: t("msad.person"),
-        role: t("msad.department"),
-        org: t("msad.company"),
-      },
-      imageSlot: MSADImageSlot,
     },
   ];
 

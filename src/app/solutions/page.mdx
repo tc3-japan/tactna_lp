@@ -1,1 +1,83 @@
 # Solutions
+
+## Problem in CIAM
+
+***Login is Solved. User Management Remains Fragmented***
+
+CIAM Platforms like Auth0 unified customer login.
+But every new product still rebuilds user, org, and access management from scratch.
+That has caused several problems.
+
+### Separate User Management per App
+
+Each application has independently designed and implemented its own user management system.
+Without standardized workflows, this leads to significant operational overhead and increased costs.
+When user IDs are managed separately, passwords must also be stored individually in each app, creating security and UX challenges.
+
+### Disconnected Organizations and Roles
+
+The design phase failed to properly incorporate role-based access control functionality and organizational concepts required for B2B operations, resulting in a patchwork implementation approach.
+Particularly regarding organizational concepts, incorporating them after initial development proves extremely challenging, sometimes leading to project abandonment.
+
+### Manual Provisioning & Access Control
+
+ID integrations between IDaaS and app are not automated or access requests are approved manually, resulting in manual operations based on inquiries or complicated procedures.
+Furthermore, implementing feature controls by contract plan and user requires significant development effort.
+
+## Negative Impact Caused by Fragmented User Management
+
+***Fragmented User Management Kills Growth***
+
+Cost & Lost Growth: Companies rebuild the same user management and portal layer for every product, leading to millions in redundant cost and slower expansion.
+
+<img
+  src="/docs/solutions/impact.png"
+  alt="Negative Impacts of Fragmented User Management"
+  className="w-full 2xl:w-4/5 mx-auto"
+/>
+
+### 1. Cost Explosion
+
+Manual provisioning across Apps.
+Rebuilding Admin Portals for each service.
+Compliance & access reviews repeated per product.
+"Fragmented identity systems cost companies ~$3.8M/year in duplicated setup & maintenance." - Avatier 2024
+
+### 2. Broken Experience
+
+Customers manage multiple logins & inconsistent access.
+Partner managers manually add/remove users.
+"17% of users abandon purchases due to login friction." - Auth0 Customer Identity Trends 2025
+
+### 3. Lost Revenue
+
+Upsell/Cross-sell across products becomes manual.
+No unified view of which customer owns which product.
+"Cross-selling drives 35% of total sales; poor identity silos block that potential." - Dinmo 2025
+
+## Solution
+
+***Tactna’s Customizable Single Self-Service Admin Portal***
+
+CIAM Platforms like Auth0 solved login. Tactna solved what happens after login.
+
+<img
+  src="/docs/solutions/solution.png"
+  alt="Tactna Architecture"
+  className="w-full 2xl:w-4/5 mx-auto"
+/>
+
+### User & Org Management
+
+Tactna provides multi-tenant hierarchy and admin portal for user management, including organizations, roles, and permissions.
+This allows customers to manage themselves and system administrators to delegate management tasks.
+
+### Lifecycle Automation
+
+You can automate user lifecycle management, including provisioning, deprovisioning, and access control.
+This reduces manual work and realizes seamless user experiences.
+
+### Cross-App Integration
+
+Unified identity across multiple applications enables shared entitlements such as a role of team administrator.
+By integrating applications with CIAM platforms, you can analyze user behavior across products, which also leads to cross-selling and upselling.

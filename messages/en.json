@@ -164,5 +164,15 @@
     "title": "Enterprise user management. Enterprise results.",
     "description": "See why global enterprises choose Tactna to scale their user management without replacing their security stack.",
     "cta": "Request a Demo"
+  },
+  "footer": {
+    "product": "Product",
+    "solutions": "Solutions",
+    "resources": "Resources",
+    "customers": "Customers",
+    "aboutUs": "About Us",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© 2025 TC3. All rights reserved."
   }
 }

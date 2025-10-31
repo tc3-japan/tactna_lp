@@ -206,5 +206,15 @@
     "title": "認証認可・ID管理の新しい標準",
     "description": "Tactnaでビジネスを加速させる",
     "cta": "デモをリクエスト"
+  },
+  "footer": {
+    "product": "プロダクト",
+    "solutions": "ソリューション",
+    "resources": "資料ダウンロード",
+    "customers": "導入事例",
+    "aboutUs": "TC3について",
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfService": "利用規約",
+    "copyright": "© 2025 TC3. All rights reserved."
   }
 }

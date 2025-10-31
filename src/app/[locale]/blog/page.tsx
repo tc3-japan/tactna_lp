@@ -72,7 +72,7 @@ export default async function BlogPage({
         </div>
 
         <div className="container mx-auto px-4 py-16">
-          <BlogList blogs={blogs} />
+          <BlogList blogs={blogs} locale={locale} />
 
           {totalPages > 1 && (
             <nav className="mt-16 flex justify-center space-x-2">

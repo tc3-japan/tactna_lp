@@ -5,9 +5,10 @@ import { cn } from '@/lib/utils';
 interface BlogListProps {
   blogs: Blog[];
   className?: string;
+  locale?: "ja" | "en";
 }
 
-export function BlogList({ blogs, className }: BlogListProps) {
+export function BlogList({ blogs, className, locale }: BlogListProps) {
   if (blogs.length === 0) {
     return (
       <div className="flex min-h-[400px] items-center justify-center">
@@ -27,7 +28,7 @@ export function BlogList({ blogs, className }: BlogListProps) {
   return (
     <div className={cn('grid gap-8 md:grid-cols-2 lg:grid-cols-3', className)}>
       {blogs.map((blog) => (
-        <BlogCard key={blog.id} blog={blog} />
+        <BlogCard key={blog.id} blog={blog} locale={locale} />
       ))}
     </div>
   );

@@ -41,3 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 memory-bank
+
+# claude code
+.serena
+.claude/settings.local.json

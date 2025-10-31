@@ -8,9 +8,10 @@ import { getLocaleFromBlog, getBlogSlug } from "@/lib/microcms/types";
 interface BlogCardProps {
   blog: Blog;
   className?: string;
+  locale?: "ja" | "en";
 }
 
-export function BlogCard({ blog, className }: BlogCardProps) {
+export function BlogCard({ blog, className, locale }: BlogCardProps) {
   const blogLocale = getLocaleFromBlog(blog);
   const t = useTranslations("blog");
   const publishedDate = blog.publishedAt || blog.createdAt;
@@ -30,7 +31,7 @@ export function BlogCard({ blog, className }: BlogCardProps) {
         className
       )}
     >
-      <Link href={`/blog/${getBlogSlug(blog)}`} className="block">
+      <Link href={`/blog/${getBlogSlug(blog)}`} className="block" locale={locale}>
         <div className="relative aspect-video overflow-hidden bg-gray-100">
           {blog.thumbnail ? (
             <Image

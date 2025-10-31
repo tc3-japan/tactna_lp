@@ -14,6 +14,7 @@ import { routing } from "@/i18n/routing";
 
 type BlogDetailPageProps = {
   params: Promise<{ locale?: "ja" | "en"; slug: string }>;
+  searchParams: Promise<{ draftKey?: string }>;
 };
 
 export async function generateStaticParams() {
@@ -26,12 +27,13 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({
-  params,
+  params, searchParams
 }: BlogDetailPageProps): Promise<Metadata> {
   const p = await params;
   const locale = p?.locale ?? routing.defaultLocale;
   const slug = p?.slug as string;
-  const blog = await getBlogBySlug(slug);
+  const draftKey = (await searchParams)["draftKey"];
+  const blog = await getBlogBySlug(slug, draftKey);
 
   if (!blog) {
     return {
@@ -87,11 +89,12 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
+export default async function BlogDetailPage({ params, searchParams }: BlogDetailPageProps) {
   const p = await params;
   const locale = p?.locale ?? routing.defaultLocale;
   const slug = p?.slug as string;
-  const blog = await getBlogBySlug(slug);
+  const draftKey = (await searchParams)["draftKey"];
+  const blog = await getBlogBySlug(slug, draftKey);
 
   if (!blog) {
     notFound();

@@ -85,9 +85,10 @@ export async function getBlogs(params?: { limit?: number; offset?: number }) {
   }
 }
 
-export async function getBlogBySlug(slug: string) {
+export async function getBlogBySlug(slug: string, draftKey?: string) {
+  const params = draftKey ? { draftKey } : undefined;
   try {
-    return (await fetchFromMicroCMS(`blogs/${slug}`)) as Blog;
+    return (await fetchFromMicroCMS(`blogs/${slug}`, params)) as Blog;
   } catch {
     // IDで見つからない場合、全記事から検索
     const allData = await getBlogs({ limit: 100 });

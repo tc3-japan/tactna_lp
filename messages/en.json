@@ -144,7 +144,8 @@
     "publishedDate": "Published",
     "previous": "Previous",
     "next": "Next",
-    "tableOfContents": "Table of Contents"
+    "tableOfContents": "Table of Contents",
+    "readingTime": "{minutes} min read"
   },
   "featureList": {
     "1": {

@@ -140,7 +140,7 @@ export function BlogDetail({
                     {formattedDate}
                   </time>
                   <span className="inline-block px-3 py-1 text-sm font-medium bg-green-600/90 rounded-full">
-                    読了時間: {readingTime}分
+                    {t("readingTime", { minutes: readingTime })}
                   </span>
                 </div>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
@@ -157,7 +157,7 @@ export function BlogDetail({
                   {formattedDate}
                 </time>
                 <span className="inline-block px-3 py-1 text-sm font-medium text-green-600 bg-green-50 rounded-full">
-                  読了時間: {readingTime}分
+                  {t("readingTime", { minutes: readingTime })}
                 </span>
               </div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 leading-tight">

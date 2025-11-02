@@ -144,7 +144,8 @@
     "publishedDate": "Published",
     "previous": "Previous",
     "next": "Next",
-    "tableOfContents": "Table of Contents"
+    "tableOfContents": "Table of Contents",
+    "readingTime": "{minutes}分で読める"
   },
   "featureList": {
     "1": {

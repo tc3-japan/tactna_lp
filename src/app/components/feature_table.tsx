@@ -105,8 +105,8 @@ export default function FeatureComparisonTable() {
       <h1 className="max-w-5xl text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 md:mb-8">
         {t("title")}
       </h1>
-      <div className="max-w-full sm:flex sm:justify-center overflow-x-auto md:overflow-x-hidden ">
-        <table className="border-collapse rounded-md mx-4 sm:mx-8 lg:mx-20 px-40">
+      <div className="max-w-full overflow-x-auto">
+        <table className="border-collapse rounded-md mx-auto">
           <thead>
             <tr>
               <th className="p-2 sm:p-3 md:p-4 border-b-2 border-gray-200 min-w-[100px]">

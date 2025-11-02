@@ -7,7 +7,7 @@ export default function Hero() {
   const tNav = useTranslations("navbar");
 
   return (
-    <div className="overflow-x-hidden pt-20 md:pt-16">
+    <div className="overflow-x-hidden md:pt-16">
       <div className="flex items-center justify-center py-20">
         <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center">
           {/* タイトル */}

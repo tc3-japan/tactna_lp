@@ -195,6 +195,7 @@
 @layer utilities {
   body {
     font-family: var(--font-noto-sans-jp), Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
   }
 }
 

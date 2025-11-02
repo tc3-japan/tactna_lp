@@ -65,8 +65,8 @@ export default function ImageTextSection({
             isReverse && "md:flex-row-reverse"
           )}
         >
-          {/* 画像セクション */}
-          <div className="md:w-1/2 relative h-64 md:h-auto">
+          {/* 画像セクション - モバイルでは2番目に表示 */}
+          <div className="order-2 md:order-0 md:w-1/2 relative h-64 md:h-auto">
             <Image
               src={imageSrc}
               alt={imageAlt}
@@ -77,10 +77,10 @@ export default function ImageTextSection({
             />
           </div>
 
-          {/* テキストセクション */}
+          {/* テキストセクション - モバイルでは1番目に表示 */}
           <div
             className={cn(
-              "md:w-1/2 p-6 sm:p-8 md:p-10 lg:p-12",
+              "order-1 md:order-0 md:w-1/2 p-6 sm:p-8 md:p-10 lg:p-12",
               "flex flex-col justify-center",
               textAlignClass
             )}

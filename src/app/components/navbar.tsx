@@ -136,11 +136,11 @@ export default function Navbar() {
                   {t("blog")}
                 </Link>
               </div>
-              {/* PC用CTAボタン */}
-              <Button className="bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
-                <Link href="/#inquiry">{t("contact")}</Link>
-              </Button>
             </div>
+
+            <Button className="bg-blue-600 hover:bg-blue-700 transition-colors duration-200">
+              <Link href="/#inquiry">{t("contact")}</Link>
+            </Button>
 
             {/* 🔽 モバイル用ハンバーガーボタン */}
             {/* md:hidden でモバイル (md未満) のみ表示 */}

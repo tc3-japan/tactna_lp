@@ -1,15 +1,15 @@
 import Hero from "../components/hero";
+import InfoCard from "../components/InfoCard";
+import InfoArchitecture from "../components/InfoArchitecture";
 import Navbar from "../components/navbar";
-//import FeatureCarousel from "../components/carousel";
-import ImageWithBorderAndDelete from "../components/banner";
-import CaseSection from "../components/CaseSection";
-import FeatureComparison from "../components/feature_comparison";
-import FeaturesEnhanced from "../components/FeaturesEnhanced";
 import Footer from "../components/footer";
 import HubSpotForm from "../components/inquiry_form";
-import VideoPlayer from "../components/video";
 import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
+import FeatureList from "../components/FeatureList";
+import InfoImpact from "../components/InfoImpact";
+import CaseCarousel from "../components/caseCarousel";
+import TC3Banner from "../components/tc3banner";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -18,21 +18,23 @@ export function generateStaticParams() {
 export default async function Home({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale?: string }>;
 }) {
-  const { locale } = await params;
+  const p = await params;
+  const locale = p?.locale ?? routing.defaultLocale;
   setRequestLocale(locale);
   return (
     <>
       <Navbar />
       <Hero />
-      <CaseSection />
-      <VideoPlayer />
-      <FeaturesEnhanced />
-      <FeatureComparison />
+      <InfoCard />
+      <InfoArchitecture />
+      <FeatureList />
+      <InfoImpact />
+      <CaseCarousel />
       <HubSpotForm />
+      <TC3Banner />
       <Footer />
-      <ImageWithBorderAndDelete />
     </>
   );
 }

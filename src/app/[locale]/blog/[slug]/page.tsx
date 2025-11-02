@@ -10,13 +10,12 @@ import { getBlogId } from "@/lib/microcms/types";
 import Navbar from "@/app/components/navbar";
 import Footer from "@/app/components/footer";
 import { stripHtmlTags, truncateDescription } from "@/lib/utils/seo";
+import { routing } from "@/i18n/routing";
 
-interface BlogDetailPageProps {
-  params: Promise<{
-    locale: "ja" | "en";
-    slug: string;
-  }>;
-}
+type BlogDetailPageProps = {
+  params: Promise<{ locale?: "ja" | "en"; slug: string }>;
+  searchParams: Promise<{ draftKey?: string }>;
+};
 
 export async function generateStaticParams() {
   const slugs = await getAllBlogSlugs();
@@ -28,10 +27,13 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({
-  params,
+  params, searchParams
 }: BlogDetailPageProps): Promise<Metadata> {
-  const { slug, locale } = await params;
-  const blog = await getBlogBySlug(slug);
+  const p = await params;
+  const locale = p?.locale ?? routing.defaultLocale;
+  const slug = p?.slug as string;
+  const draftKey = (await searchParams)["draftKey"];
+  const blog = await getBlogBySlug(slug, draftKey);
 
   if (!blog) {
     return {
@@ -87,9 +89,12 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
-  const { locale, slug } = await params;
-  const blog = await getBlogBySlug(slug);
+export default async function BlogDetailPage({ params, searchParams }: BlogDetailPageProps) {
+  const p = await params;
+  const locale = p?.locale ?? routing.defaultLocale;
+  const slug = p?.slug as string;
+  const draftKey = (await searchParams)["draftKey"];
+  const blog = await getBlogBySlug(slug, draftKey);
 
   if (!blog) {
     notFound();

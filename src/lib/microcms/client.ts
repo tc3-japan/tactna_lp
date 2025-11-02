@@ -2,23 +2,30 @@
 import type { Blog, BlogList } from "./types";
 import { getLocaleFromBlog, getBlogId } from "./types";
 
-const MICROCMS_SERVICE_DOMAIN = process.env.MICROCMS_SERVICE_DOMAIN;
-const MICROCMS_API_KEY = process.env.MICROCMS_API_KEY;
+function getMicroCMSConfig() {
+  const MICROCMS_SERVICE_DOMAIN = process.env.MICROCMS_SERVICE_DOMAIN;
+  const MICROCMS_API_KEY = process.env.MICROCMS_API_KEY;
 
-if (!MICROCMS_SERVICE_DOMAIN) {
-  throw new Error("MICROCMS_SERVICE_DOMAIN is required");
+  if (!MICROCMS_SERVICE_DOMAIN) {
+    throw new Error("MICROCMS_SERVICE_DOMAIN is required");
+  }
+
+  if (!MICROCMS_API_KEY) {
+    throw new Error("MICROCMS_API_KEY is required");
+  }
+
+  return {
+    MICROCMS_SERVICE_DOMAIN,
+    MICROCMS_API_KEY,
+    baseURL: `https://${MICROCMS_SERVICE_DOMAIN}/api/v1`,
+  };
 }
-
-if (!MICROCMS_API_KEY) {
-  throw new Error("MICROCMS_API_KEY is required");
-}
-
-const baseURL = `https://${MICROCMS_SERVICE_DOMAIN}/api/v1`;
 
 async function fetchFromMicroCMS(
   endpoint: string,
   params?: Record<string, string | number | boolean>
 ) {
+  const { baseURL, MICROCMS_API_KEY } = getMicroCMSConfig();
   const url = new URL(`${baseURL}/${endpoint}`);
 
   if (params) {
@@ -32,7 +39,7 @@ async function fetchFromMicroCMS(
 
   const response = await fetch(url.toString(), {
     headers: {
-      "X-MICROCMS-API-KEY": MICROCMS_API_KEY!,
+      "X-MICROCMS-API-KEY": MICROCMS_API_KEY,
       "Content-Type": "application/json",
     },
   });
@@ -78,9 +85,10 @@ export async function getBlogs(params?: { limit?: number; offset?: number }) {
   }
 }
 
-export async function getBlogBySlug(slug: string) {
+export async function getBlogBySlug(slug: string, draftKey?: string) {
+  const params = draftKey ? { draftKey } : undefined;
   try {
-    return (await fetchFromMicroCMS(`blogs/${slug}`)) as Blog;
+    return (await fetchFromMicroCMS(`blogs/${slug}`, params)) as Blog;
   } catch {
     // IDで見つからない場合、全記事から検索
     const allData = await getBlogs({ limit: 100 });

@@ -1,64 +1,43 @@
 {
   "navbar": {
-    "features": "Features",
-    "compare": "Compare",
     "blog": "Blog",
-    "download_material": "Download Material",
-    "contact": "Contact us"
+    "products": "Products",
+    "solutions": "Solutions",
+    "resources": "Resources",
+    "contact": "Contact sales",
+    "customers": "Customers",
+    "resources_dropdown": {
+      "documentation": "Documentation",
+      "blog": "Blog",
+      "case_studies": "Case Studies",
+      "download_materials": "Download Materials",
+      "webinar": "Webinars",
+      "api_reference": "API Reference"
+    }
   },
   "hero": {
-    "catchcopy": "Unleash your potential with Tactna",
-    "title1": "Deploy Your Services",
-    "title2": "Instantly with Tactna",
-    "desc": "Tactna covers everything you need to launch your service",
+    "title": "You Build Apps.<br></br>We Handle User Management.",
+    "desc": "Enable self-service user management across complex<br></br>organizational hierarchies while you build what matters most.",
     "feature1": "Authentication & Authorization",
     "feature2": "Utilize various data linked to IDs",
     "feature3": "My Page, Admin Dashboard",
     "feature4": "Customizable for various business workflows",
     "customers": "Our Clients"
   },
+  "infoCard": {
+    "title": "Enterprise Growth<br></br>Creates Enterprise Complexity.",
+    "description": "As you launch more applications, you create more silos. <br></br>The result? A fragmented user experience for your customers and a complex, <br></br>costly operational nightmare for your teams."
+  },
+  "infoArchitecture": {
+    "title": "The Enterprise User Management Layer<br></br>That Works With Your Stack.",
+    "description": "Tactna sits between your applications and your chosen IDaaS provider, delivering enterprise-grade self-service capabilities without replacing your security foundation. Scale complex organizational structures while maintaining the security standards your enterprise demands."
+  },
+  "infoImpact": {
+    "title": "The Impact You Can Expect",
+    "description": "Our customers are planning their Tactna implementations with these targets in mind. <br></br>See what's possible when you eliminate user management complexity."
+  },
   "video": {
     "title": "Demo Video"
-  },
-  "features": {
-    "title": "Features of Tactna",
-    "subtitle": "Achieve enterprise-level ID management infrastructure while significantly reducing development effort",
-    "cards": {
-      "1": {
-        "title": "ID & Account Mastery",
-        "desc": "Tactna is a platform that brings together the best practices in ID and account management. Compared to a full scratch build, it significantly reduces initial setup costs and enables a 36% reduction over 5 years."
-      },
-      "2": {
-        "title": "Top-Notch Security",
-        "desc": "With built-in industry-standard authentication features, Tactna implements high-security design by default. By incorporating TC3's best practices, it quickly realizes a common authentication base for multiple services. Additionally, as a fully managed service, it spares you the operational burdens."
-      },
-      "3": {
-        "title": "B2B Ready",
-        "desc": "For B2B services, ensuring a service supports application usage rights and contract plans, in addition to simple user login, is crucial. Tactna has these implementations in place by default, eliminating the need for complex requirements definition or design."
-      },
-      "4": {
-        "title": "Ultimate Flexibility",
-        "desc": "In business expansion, seamless operation involves integration with core systems like payment services, internal contract management systems, and accounting systems. Tactna can flexibly adapt to different specifications from each service provider."
-      },
-      "5": {
-        "title": "Efficient Operations",
-        "desc": "By implementing portal features, which are said to account for 20% of development costs, it alleviates the need for engineers to handle ID-related tasks after going live."
-      },
-      "6": {
-        "title": "Data-Centric Insights",
-        "desc": "Tactna functions as a platform for analyzing active user numbers and company profiles. It enables a comprehensive view of user statuses, forming the basis for various initiatives."
-      }
-    },
-    "readmore": "Read More",
-    "stats": {
-      "cost_reduction": "Total cost reduction over 5 years",
-      "cost_comparison": "Compared to full scratch development",
-      "deployment_time": "Fastest deployment period",
-      "deployment_period": "2 weeks",
-      "deployment_desc": "From PoC to production",
-      "support": "Enterprise support",
-      "support_desc": "Expert team available 24/7"
-    }
   },
   "compare": {
     "title": "Liberate Developers from ID Management",
@@ -134,9 +113,14 @@
     "gsearch": {
       "company": "G-Search Limited",
       "quote": "By adopting the Tactna Identity Platform, we were able to establish the foundation for the 'data utilization' we ultimately want to achieve. We plan to migrate all services onto Tactna in the future. By eliminating the individual costs of considering and implementing identity domains that would normally be considered for each application, including authentication/authorization and organizational concepts, we expect to be able to focus on application development. We also look forward to powerful updates to Tactna in the future.",
-      "department": "Digital Solutions Group, Group Manager",
+      "department": "Group Manager, Digital Solutions Group",
       "person": "Mr. Akira Inagaki"
     }
+  },
+  "testimonial": {
+    "previous": "Previous",
+    "next": "Next",
+    "slideAnnouncement": "Slide {current} of {total}"
   },
   "banner": {
     "close": "Close"
@@ -160,6 +144,44 @@
     "publishedDate": "Published",
     "previous": "Previous",
     "next": "Next",
-    "tableOfContents": "Table of Contents"
+    "tableOfContents": "Table of Contents",
+    "readingTime": "{minutes} min read"
+  },
+  "featureList": {
+    "1": {
+      "label": "Selectable IDaaS Integration",
+      "title": "Keep Your Security Stack. Add Enterprise Capabilities.",
+      "description": "Choose your favorite IDaaS provider like Auth0, Cognito for your security layer. Tactna adds the enterprise management capabilities they don't provide."
+    },
+    "2": {
+      "label": "Self-Service Portals",
+      "title": "Empower Your Customers to Help Themselves.",
+      "description": "Provide branded portals for customers to manage their organization, invite team members, and handle cross functions like billing within the organization. Reduce your administrative overhead dramatically."
+    },
+    "3": {
+      "label": "Enhanced Security & Compliance",
+      "title": "Multi-Tier Organizations. Zero Security Gaps.",
+      "description": "Enable partners and resellers to self-manage their teams while maintaining security. Automated user lifecycle management ensures departing users are removed instantly across all systems."
+    },
+    "4": {
+      "label": "Enterprise-Ready Customization",
+      "title": "Built for Enterprise Requirements",
+      "description": "Full UI customization, custom properties, workflow hooks, and Core System integration. Every deployment can match your exact enterprise needs and branding."
+    }
+  },
+  "tc3banner": {
+    "title": "Enterprise user management. Enterprise results.",
+    "description": "See why global enterprises choose Tactna to scale their user management without replacing their security stack.",
+    "cta": "Request a Demo"
+  },
+  "footer": {
+    "product": "Product",
+    "solutions": "Solutions",
+    "resources": "Resources",
+    "customers": "Customers",
+    "aboutUs": "About Us",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© 2025 TC3. All rights reserved."
   }
 }

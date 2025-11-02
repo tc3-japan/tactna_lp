@@ -100,7 +100,7 @@ export default function FeatureComparison() {
 
   return (
     <div
-      className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white"
+      className="py-20 px-4 bg-linear-to-b from-gray-50 to-white"
       id="feature-comparison"
     >
       <div className="max-w-7xl mx-auto">
@@ -149,7 +149,7 @@ export default function FeatureComparison() {
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}
                     transition={{ duration: 1, delay: 0.5 }}
-                    className="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full"
+                    className="bg-linear-to-r from-blue-500 to-blue-600 h-3 rounded-full"
                   />
                 </div>
               </div>
@@ -157,7 +157,7 @@ export default function FeatureComparison() {
               {/* Key Benefits */}
               <div className="space-y-3 mb-6">
                 <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                     <span className="text-blue-600 text-xs">✓</span>
                   </div>
                   <p className="text-sm text-gray-700">
@@ -165,7 +165,7 @@ export default function FeatureComparison() {
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                     <span className="text-blue-600 text-xs">✓</span>
                   </div>
                   <p className="text-sm text-gray-700">
@@ -173,7 +173,7 @@ export default function FeatureComparison() {
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                     <span className="text-blue-600 text-xs">✓</span>
                   </div>
                   <p className="text-sm text-gray-700">
@@ -231,7 +231,7 @@ export default function FeatureComparison() {
             {/* Limitations */}
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-3">
-                <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-gray-400 text-xs">－</span>
                 </div>
                 <p className="text-sm text-gray-600">
@@ -239,7 +239,7 @@ export default function FeatureComparison() {
                 </p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-gray-400 text-xs">－</span>
                 </div>
                 <p className="text-sm text-gray-600">
@@ -247,7 +247,7 @@ export default function FeatureComparison() {
                 </p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-5 h-5 bg-gray-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-gray-400 text-xs">－</span>
                 </div>
                 <p className="text-sm text-gray-600">
@@ -298,7 +298,7 @@ export default function FeatureComparison() {
                   initial={{ width: 0 }}
                   animate={{ width: "100%" }}
                   transition={{ duration: 1, delay: 0.3 }}
-                  className="bg-gradient-to-r from-orange-400 to-red-500 h-3 rounded-full"
+                  className="bg-linear-to-r from-orange-400 to-red-500 h-3 rounded-full"
                 />
               </div>
             </div>
@@ -306,7 +306,7 @@ export default function FeatureComparison() {
             {/* Challenges */}
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-3">
-                <div className="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-orange-600 text-xs">!</span>
                 </div>
                 <p className="text-sm text-gray-600">
@@ -314,7 +314,7 @@ export default function FeatureComparison() {
                 </p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-orange-600 text-xs">!</span>
                 </div>
                 <p className="text-sm text-gray-600">
@@ -322,7 +322,7 @@ export default function FeatureComparison() {
                 </p>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-5 h-5 bg-orange-100 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-orange-600 text-xs">!</span>
                 </div>
                 <p className="text-sm text-gray-600">
@@ -348,16 +348,16 @@ export default function FeatureComparison() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-12"
+          className="bg-linear-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-12"
         >
-          <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl font-bold mb-8 text-center bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             {tDetail("feature_detail_comparison")}
           </h2>
 
           <div className="overflow-hidden rounded-2xl bg-white shadow-xl">
             <table className="w-full">
               <thead>
-                <tr className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                <tr className="bg-linear-to-r from-blue-600 to-purple-600 text-white">
                   <th className="py-4 px-6 text-left font-semibold">
                     {t("feature")}
                   </th>
@@ -380,7 +380,7 @@ export default function FeatureComparison() {
                           className="py-3 px-6 font-semibold text-gray-700"
                         >
                           <div className="flex items-center gap-3">
-                            <span className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white text-sm font-bold shadow-lg">
+                            <span className="w-8 h-8 bg-linear-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white text-sm font-bold shadow-lg">
                               {categoryIndex + 1}
                             </span>
                             {t(category)}

@@ -11,14 +11,15 @@ import StructuredData from "@/components/StructuredData";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale?: string }>;
 }): Promise<Metadata> {
-  const { locale } = await params;
+  const p = await params;
+  const locale = p?.locale ?? routing.defaultLocale;
   const t = await getTranslations({ locale, namespace: "metadata" });
-  
+
   const baseUrl = "https://www.tactna.com";
   const url = locale === "ja" ? baseUrl : `${baseUrl}/${locale}`;
-  
+
   return {
     title: t("title"),
     description: t("description"),
@@ -26,8 +27,8 @@ export async function generateMetadata({
     alternates: {
       canonical: url,
       languages: {
-        'ja': baseUrl,
-        'en': `${baseUrl}/en`,
+        ja: baseUrl,
+        en: `${baseUrl}/en`,
       },
     },
     openGraph: {
@@ -58,9 +59,9 @@ export async function generateMetadata({
       googleBot: {
         index: true,
         follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
       },
     },
   };
@@ -75,9 +76,10 @@ export default async function LocaleLayout({
   params,
 }: {
   children: ReactNode;
-  params: Promise<{ locale: string }>;
+  params: Promise<{ locale?: string }>;
 }) {
-  const { locale } = await params;
+  const p = await params;
+  const locale = p?.locale ?? routing.defaultLocale;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }

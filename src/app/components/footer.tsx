@@ -3,22 +3,82 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 export default function Footer() {
-  const t = useTranslations("company");
+  const t = useTranslations("footer");
+
   return (
-    <footer className="bg-[#1D2E4A] text-white pt-10 pb-4">
-      <div className="flex flex-col md:flex-row items-center justify-center space-y-10 md:space-y-0 md:space-x-20 py-10">
-        <div className="flex flex-col space-y-2">
-          <Image src="/tc3_logo.svg" alt="Logo" width={120} height={100} />
-          <p className="text-lg font-semibold">{t("name")}</p>
-          <p className="hover:underline">{t("address1")}</p>
-          <p className="hover:underline">{t("address2")}</p>
+    <footer className="bg-white text-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 pt-20">
+        <div className="flex flex-col sm:flex-row items-start sm:items-end gap-4 sm:gap-8 md:gap-12 lg:gap-16">
+          {/* Logo and Copyright Section */}
+          <Link href="/" className="inline-block mb-4 sm:mb-0">
+            <Image
+              src="/tactna_logo_2.png"
+              alt="Tactna Logo"
+              width={200}
+              height={100}
+              className="h-10 w-auto"
+            />
+          </Link>
+
+          <div className="flex flex-wrap gap-x-6 gap-y-2 sm:gap-8 md:gap-12 lg:gap-16">
+            <Link
+              href="/products"
+              className="text-black text-sm hover:text-blue-400 transition-colors duration-200"
+            >
+              {t("product")}
+            </Link>
+
+            <Link
+              href="/solutions"
+              className="text-black text-sm hover:text-blue-400 transition-colors duration-200"
+            >
+              {t("solutions")}
+            </Link>
+
+            <a
+              href="https://info.tc3.co.jp/hubfs/Tactna/tactna_a4_DL%E7%94%A8.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-black hover:text-blue-400 transition-colors duration-200"
+            >
+              {t("resources")}
+            </a>
+
+            <Link
+              href="/customers"
+              className="text-black text-sm hover:text-blue-400 transition-colors duration-200"
+            >
+              {t("customers")}
+            </Link>
+
+            <a
+              href="https://www.tc3.co.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black text-sm hover:text-blue-400 transition-colors duration-200"
+            >
+              {t("aboutUs")}
+            </a>
+          </div>
         </div>
-        <Link href="https://www.tc3.co.jp/blog/" target="_blank" rel="noopener">
-          <Image src="/bnr_gigabyte.png" alt="Logo" width={500} height={100} />
-        </Link>
-      </div>
-      <div className="border-t border-gray-800 text-center text-gray-400">
-        <p>&copy; 2025 TC3. All rights reserved.</p>
+
+        <div className="flex flex-row justify-between pt-10">
+          <p className="text-sm text-gray-400 mt-4">{t("copyright")}</p>
+          <div className="flex flex-wrap justify-center sm:justify-start gap-6">
+            {/* <Link
+              href="/privacy"
+              className="text-sm text-gray-400 hover:text-blue-400 transition-colors duration-200"
+            >
+              {t("privacyPolicy")}
+            </Link>
+            <Link
+              href="/terms"
+              className="text-sm text-gray-400 hover:text-blue-400 transition-colors duration-200"
+            >
+              {t("termsOfService")}
+            </Link> */}
+          </div>
+        </div>
       </div>
     </footer>
   );

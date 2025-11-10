@@ -55,7 +55,7 @@ export function BlogDetail({
       
       toc.push({
         id,
-        text: text.replace(/<[^>]*>/g, ''), // HTMLタグを除去
+        text: unescapeTocText(text.replace(/<[^>]*>/g, '')), // HTMLタグの除去、エスケープ文字の戻し
         level
       });
       
@@ -237,3 +237,12 @@ export function BlogDetail({
     </div>
   );
 }
+
+const unescapeTocText = (text: string) => {
+  return text
+    .replaceAll(/&quot;/g, '"')
+    .replaceAll(/&amp;/g, "&")
+    .replaceAll(/&lt;/g, "<")
+    .replaceAll(/&gt;/g, ">")
+    .replaceAll(/&apos;/g, "'");
+};

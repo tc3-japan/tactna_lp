@@ -16,7 +16,7 @@
     }
   },
   "hero": {
-    "title": "アプリ開発に集中を。<br></br>ユーザー管理はお任せください。",
+    "title": "You Build Apps.<br></br>We Handle User Management.",
     "desc": "複雑な組織階層にも対応するセルフサービス型ユーザー管理を実現。<br></br>貴社はコア業務である開発にリソースを集中できます。",
     "feature1": "認証・認可基盤",
     "feature2": "IDに紐づくデータ活用",

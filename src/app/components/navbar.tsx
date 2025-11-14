@@ -4,12 +4,13 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Link } from "@/i18n/navigation";
 import NextLink from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const t = useTranslations("navbar");
+  const locale = useLocale();
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -107,15 +108,17 @@ export default function Navbar() {
                       >
                         {t("resources_dropdown.blog")}
                       </Link>
-                      <a
-                        href="https://info.tc3.co.jp/hubfs/Tactna/tactna_a4_DL%E7%94%A8.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                        onClick={() => setIsResourcesOpen(false)}
-                      >
-                        {t("resources_dropdown.download_materials")}
-                      </a>
+                      {locale === "ja" && (
+                        <a
+                          href="https://info.tc3.co.jp/hubfs/Tactna/tactna_a4_DL%E7%94%A8.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                          onClick={closeMobileMenu}
+                        >
+                          {t("resources_dropdown.download_materials")}
+                        </a>
+                      )}
                       <a
                         href="https://tc3-japan.github.io/prd-hammerhead/public/api/for_app_v1/"
                         target="_blank"
@@ -215,15 +218,17 @@ export default function Navbar() {
                 >
                   {t("resources_dropdown.blog")}
                 </Link>
-                <a
-                  href="https://info.tc3.co.jp/hubfs/Tactna/tactna_a4_DL%E7%94%A8.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-                  onClick={closeMobileMenu}
-                >
-                  {t("resources_dropdown.download_materials")}
-                </a>
+                {locale === "ja" && (
+                  <a
+                    href="https://info.tc3.co.jp/hubfs/Tactna/tactna_a4_DL%E7%94%A8.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                    onClick={closeMobileMenu}
+                  >
+                    {t("resources_dropdown.download_materials")}
+                  </a>
+                )}
                 <a
                   href="https://tc3-japan.github.io/prd-hammerhead/public/api/for_app_v1/"
                   target="_blank"

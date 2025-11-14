@@ -5,7 +5,6 @@ import "../globals.css";
 import type { Metadata } from "next";
 import { routing } from "@/i18n/routing";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import DownloadMaterialButton from "../components/DownloadMaterialButton";
 import StructuredData from "@/components/StructuredData";
 
 export async function generateMetadata({
@@ -90,10 +89,7 @@ export default async function LocaleLayout({
     <>
       <StructuredData locale={locale} />
       <NextIntlClientProvider locale={locale}>
-        <>
-          {children}
-          <DownloadMaterialButton />
-        </>
+        <>{children}</>
       </NextIntlClientProvider>
     </>
   );
